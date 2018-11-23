@@ -22,11 +22,11 @@
   },
   "homepage": "https://ui.chrisrzhou.io",
   "scripts": {
-    "prepare": "npm run clean && babel src -d dist",
+    "prepare": "yarn clean && yarn build",
     "clean": "rm -rf dist",
     "lint": "eslint --fix src",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "dev": "docz dev",
+    "build": "babel src -d dist && docz build"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -47,6 +47,7 @@
     "styled-components": ">=4.0.0"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "rebass": "^3.0.0-11"
   }
 }

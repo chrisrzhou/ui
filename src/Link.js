@@ -4,13 +4,14 @@ import {Link as RebassLink} from 'rebass';
 
 import colors from './colors';
 
-function Link({children, href, target}) {
+function Link({children, disableTextDecoration, href, target}) {
   return (
     <RebassLink
       css={`
         color: ${colors.secondary};
         cursor: pointer;
         display: inline-block;
+        text-decoration: ${disableTextDecoration ? 'none' : undefined};
         :hover {
           color: ${colors.base};
           text-decoration: none;
@@ -23,7 +24,12 @@ function Link({children, href, target}) {
   );
 }
 
+Link.defaultProps = {
+  disableTextDecoration: false,
+};
+
 Link.propTypes = {
+  disableTextDecoration: PropTypes.bool.isRequired,
   href: PropTypes.string,
   target: PropTypes.string,
 };

@@ -2,8 +2,9 @@
 name: Logo
 ---
 
-import {Logo} from './../src'
 import {Playground, PropsTable} from 'docz'
+import {Flex} from 'rebass'
+import Logo from './Logo';
 
 # Logo
 
@@ -20,9 +21,11 @@ Site logo that links back to https://chrisrzhou.io.
 ## Customizable sizes
 
 <Playground>
-  <Logo size={20}/>
-  <Logo size={40}/>
-  <Logo size={100}/>
+  <Flex flexDirection="column">
+    <Logo size={20}/>
+    <Logo size={40}/>
+    <Logo size={100}/>
+  </Flex>
 </Playground>
 
 ## Hide Text

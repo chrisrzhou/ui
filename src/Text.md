@@ -3,7 +3,7 @@ name: Text
 ---
 
 import {Playground, PropsTable} from 'docz'
-import {Text} from './../src';
+import Text from './Text';
 
 # Text
 

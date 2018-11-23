@@ -78,7 +78,13 @@ function Logo({disableLink, showText, size}) {
       )}
     </Flex>
   );
-  return disableLink ? logo : <Link href="https://chrisrzhou.io">{logo}</Link>;
+  return disableLink ? (
+    logo
+  ) : (
+    <Link disableTextDecoration href="https://chrisrzhou.io">
+      {logo}
+    </Link>
+  );
 }
 
 Logo.defaultProps = {
