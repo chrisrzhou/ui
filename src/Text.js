@@ -5,10 +5,10 @@ import {Text as RebassText} from 'rebass';
 import colors from './colors';
 
 const fontColors = {
-  primary: colors.black,
-  secondary: colors.secondary,
-  highlight: colors.base,
-  disabled: colors.gray[2],
+  primary: colors.primaryText,
+  secondary: colors.secondaryText,
+  highlight: colors.highlight,
+  disabled: colors.disabled,
 };
 
 function Text({children, variant}) {

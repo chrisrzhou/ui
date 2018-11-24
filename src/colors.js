@@ -1,7 +1,7 @@
 // https://palx.jxnblk.com/5BA8F8
 
 const palette = {
-  base: '#5BA8F8',
+  base: '#5ba8f8',
   black: '#3b3f43',
   gray: [
     '#f8f9fa',
@@ -164,4 +164,8 @@ const palette = {
 export default {
   ...palette,
   secondary: palette.gray[5],
+  primaryText: palette.black,
+  secondaryText: palette.gray[5],
+  highlight: palette.base,
+  disabled: palette.gray[2],
 };

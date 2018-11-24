@@ -8,7 +8,7 @@ function Link({children, disableTextDecoration, href, target}) {
   return (
     <RebassLink
       css={`
-        color: ${colors.secondary};
+        color: ${colors.secondaryText};
         cursor: pointer;
         display: inline-block;
         text-decoration: ${disableTextDecoration ? 'none' : undefined};

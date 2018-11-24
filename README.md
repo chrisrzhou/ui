@@ -2,4 +2,4 @@
 
 https://ui.chrisrzhou.io
 
-React UI components for personal projects
+React UI components and design system for personal projects

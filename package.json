@@ -1,15 +1,15 @@
 {
   "name": "@chrisrzhou/ui",
   "version": "0.0.1",
-  "description": "React UI components for personal projects",
+  "description": "React UI components and design system for personal projects",
   "main": "dist/index.js",
   "keywords": [
     "chrisrzhou",
     "ui",
     "components",
     "design-system",
-    "presentational",
-    "functional"
+    "rebass",
+    "docz"
   ],
   "author": "Chris Zhou <christopher.r.zhou@gmail.com> (https://github.com/chrisrzhou)",
   "license": "MIT",
