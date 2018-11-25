@@ -1,5 +1,6 @@
 ---
 name: Blockquote
+route: /components/blockquote
 ---
 
 import {Playground, PropsTable} from 'docz'

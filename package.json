@@ -1,13 +1,16 @@
 {
   "name": "@chrisrzhou/ui",
   "version": "0.0.1",
-  "description": "React UI components and design system for personal projects",
+  "description": "Progressive design system, React UI components, and documentation for personal projects",
   "main": "dist/index.js",
   "keywords": [
     "chrisrzhou",
     "ui",
     "components",
     "design-system",
+    "progressive",
+    "documentation",
+    "react",
     "rebass",
     "docz"
   ],

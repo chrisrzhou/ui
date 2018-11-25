@@ -1,5 +1,6 @@
 ---
 name: ClipboardBox
+route: /components/clipboard-box
 ---
 
 import {Playground, PropsTable} from 'docz'

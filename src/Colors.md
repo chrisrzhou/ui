@@ -1,11 +1,12 @@
 ---
 name: Color
 order: -3
+route: /colors
 ---
 
 import {Playground, PropsTable} from 'docz'
 import {Box, Flex} from 'rebass';
-import ColorPill from './ColorPill';
+import ColorBox from './ColorBox';
 import colors from './colors';
 
 # Color
@@ -15,7 +16,7 @@ Color generation and usage.
 ## Core Colors
 
 Color palette generation is created using `palx` ([source](https://github.com/jxnblk/palx)) using the following base color:
-<ColorPill color={colors.base} label="base" />
+<ColorBox color={colors.base} label="base" />
 
 This results in the following core colors used across the site:
 
@@ -24,7 +25,7 @@ This results in the following core colors used across the site:
     {Object.keys(colors).map(colorKey => {
       if (typeof colors[colorKey] === 'string') {
         return (
-          <ColorPill
+          <ColorBox
             key={colorKey}
             color={colorKey}
             label={colorKey}
@@ -50,7 +51,7 @@ Each color in the palette can be intuitively accessed by the array index of the 
             {colors[colorKey].map((color, i) => {
               const colorCode = colorKey + i;
               return (
-                <ColorPill
+                <ColorBox
                   key={colorCode}
                   color={colorCode}
                   label={colorCode}

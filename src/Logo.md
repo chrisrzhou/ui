@@ -1,5 +1,6 @@
 ---
 name: Logo
+route: /components/logo
 ---
 
 import {Playground, PropsTable} from 'docz'

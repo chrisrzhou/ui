@@ -1,5 +1,6 @@
 ---
 name: Text
+route: /components/text
 ---
 
 import {Playground, PropsTable} from 'docz'

@@ -23,7 +23,7 @@ function getColorHex(color) {
   }
 }
 
-function ColorPill({color, label, width}) {
+function ColorBox({color, label, width}) {
   const colorHex = getColorHex(color);
   const variant = getLuma(colorHex) > 0.5 ? 'base' : 'inverse';
   const fontSize = '12px';
@@ -45,14 +45,14 @@ function ColorPill({color, label, width}) {
   );
 }
 
-ColorPill.defaultProps = {
+ColorBox.defaultProps = {
   width: 100,
 };
 
-ColorPill.propTypes = {
+ColorBox.propTypes = {
   color: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-export default ColorPill;
+export default ColorBox;

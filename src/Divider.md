@@ -1,5 +1,6 @@
 ---
 name: Divider
+route: /components/divider
 ---
 
 import {Playground, PropsTable} from 'docz'

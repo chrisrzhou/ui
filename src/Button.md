@@ -1,5 +1,6 @@
 ---
 name: Button
+route: /components/button
 ---
 
 import {Playground, PropsTable} from 'docz'

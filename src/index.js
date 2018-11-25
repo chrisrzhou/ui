@@ -3,7 +3,7 @@ export {default as Blockquote} from './Blockquote';
 export {default as Button} from './Button';
 export {default as ClipboardBox} from './CliboardBox';
 export {default as CodeBlock} from './CodeBlock';
-export {default as ColorPill} from './ColorPill';
+export {default as ColorBox} from './ColorBox';
 export {default as Divider} from './Divider';
 export {default as Heading} from './Heading';
 export {default as Link} from './Link';

@@ -1,5 +1,6 @@
 ---
 name: Link
+route: /components/link
 ---
 
 import {Playground, PropsTable} from 'docz'

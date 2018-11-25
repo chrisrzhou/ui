@@ -1,10 +1,11 @@
 ---
 name: List
+route: /components/list
 ---
 
 import {Playground, PropsTable} from 'docz'
 import {Box} from 'rebass';
-import ColorPill from './ColorPill';
+import ColorBox from './ColorBox';
 import List from './List';
 
 # List
@@ -28,20 +29,20 @@ Any combination of components can be passed to `List`
   </List>
   <h2>List of color pills</h2>
   <List>
-    <ColorPill color="base" label="Color Pill"/>
-    <ColorPill color="black" label="Color Pill"/>
-    <ColorPill color="gray" label="Color Pill"/>
-    <ColorPill color="grayLight" label="Color Pill"/>
-    <ColorPill color="grayWhite" label="Color Pill"/>
+    <ColorBox color="base" label="Color Pill"/>
+    <ColorBox color="black" label="Color Pill"/>
+    <ColorBox color="gray" label="Color Pill"/>
+    <ColorBox color="grayLight" label="Color Pill"/>
+    <ColorBox color="grayWhite" label="Color Pill"/>
   </List>
   <h2>List of mixed components</h2>
   <List>
-    <ColorPill color="base" label="Color Pill"/>
+    <ColorBox color="base" label="Color Pill"/>
     <Box bg="#ddd" p={3} width="100px"/>
-    <ColorPill color="gray" label="Color Pill"/>
+    <ColorBox color="gray" label="Color Pill"/>
     <Box bg="#ddd" p={3} width="100px"/>
     <div>Some Text</div>
-    <ColorPill color="grayLight" label="Color Pill"/>
+    <ColorBox color="grayLight" label="Color Pill"/>
   </List>
 </Playground>
 

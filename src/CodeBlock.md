@@ -1,5 +1,6 @@
 ---
 name: CodeBlock
+route: /components/code-block
 ---
 
 import {Playground, PropsTable} from 'docz'

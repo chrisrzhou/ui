@@ -1,5 +1,6 @@
 ---
 name: Heading
+route: /components/heading
 ---
 
 import {Playground, PropsTable} from 'docz'
