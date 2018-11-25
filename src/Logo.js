@@ -5,7 +5,7 @@ import Link from './Link';
 import Text from './Text';
 import colors from './colors';
 
-const {base: baseColor, secondary: secondaryColor} = colors;
+const {base: baseColor, gray} = colors;
 
 function Logo({disableLink, showText, size}) {
   const fontSize = `${size * 0.4}px`;
@@ -22,7 +22,7 @@ function Logo({disableLink, showText, size}) {
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <rect x="-5.68434189e-14" y="0" width="250" height="250" />
           <rect
-            fill={secondaryColor}
+            fill={gray}
             transform="translate(123.516504, 124.871843) scale(1, -1) rotate(45.000000) translate(-123.516504, -124.871843) "
             x="36.2911076"
             y="112.371843"
@@ -68,7 +68,7 @@ function Logo({disableLink, showText, size}) {
           <Text fontSize={fontSize} variant="highlight">
             chris
           </Text>
-          <Text fontSize={fontSize} variant="secondary">
+          <Text fontSize={fontSize} variant="light">
             r
           </Text>
           <Text fontSize={fontSize} variant="highlight">

@@ -15,11 +15,15 @@ Basic link element
 ## Basic
 
 <Playground>
-  <Flex flexDirection="column">
+  <Flex>
     <Link href="https://github.com/chrisrzhou/ui">Link to repo</Link>
+  </Flex>
+  <Flex>
     <Link href="https://github.com/chrisrzhou/ui" target="_blank">
       Link to repo (new window)
     </Link>
+  </Flex>
+  <Flex>
     <Link
       disableTextDecoration
       href="https://github.com/chrisrzhou/ui">

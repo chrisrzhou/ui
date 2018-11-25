@@ -1,38 +1,58 @@
-import {Flex, Text} from 'rebass';
+import {Box, Flex} from 'rebass';
 import React from 'react';
 import PropTypes from 'prop-types';
+import Text from './Text';
+import colors from './colors';
+import ClipboardBox from './ClipboardBox';
 
-const getFontColor = hex => {
+function getLuma(hex) {
   const hexValue = hex.replace(/#/, '');
   const r = parseInt(hexValue.substr(0, 2), 16);
   const g = parseInt(hexValue.substr(2, 2), 16);
   const b = parseInt(hexValue.substr(4, 2), 16);
-  const luma = [0.299 * r, 0.587 * g, 0.114 * b].reduce((a, b) => a + b) / 255;
-  return luma > 0.5 ? 'black' : 'white';
-};
+  return [0.299 * r, 0.587 * g, 0.114 * b].reduce((a, b) => a + b) / 255;
+}
 
-function ColorPill({color, label}) {
+function getColorHex(color) {
+  if (colors[color]) {
+    return colors[color];
+  } else if (colors[color.slice(0, color.length - 1)]) {
+    return colors[color.slice(0, color.length - 1)][color[color.length - 1]];
+  } else {
+    return colors[color] || color;
+  }
+}
+
+function ColorPill({color, label, width}) {
+  const colorHex = getColorHex(color);
+  const variant = getLuma(colorHex) > 0.5 ? 'base' : 'inverse';
+  const fontSize = '12px';
   return (
-    <Text
-      bg={color}
-      color={getFontColor(color)}
-      fontSize="12px"
-      textAlign="center"
-      p={2}
-      width="100px">
-      <Flex flexDirection="column">
-        <span>
-          <b>{label}</b>
-        </span>
-        <span>({color})</span>
-      </Flex>
-    </Text>
+    <ClipboardBox value={colorHex}>
+      <Box bg={colorHex} fontSize="12px" m={1} p={2} width={width}>
+        <Flex>
+          <Text fontSize={fontSize} variant={variant}>
+            <b>{label}</b>
+          </Text>
+        </Flex>
+        <Flex>
+          <Text fontSize={fontSize} variant={variant}>
+            {colorHex}
+          </Text>
+        </Flex>
+      </Box>
+    </ClipboardBox>
   );
 }
+
+ColorPill.defaultProps = {
+  width: 100,
+};
 
 ColorPill.propTypes = {
   color: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default ColorPill;

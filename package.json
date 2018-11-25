@@ -28,6 +28,16 @@
     "dev": "docz dev",
     "build": "babel src -d dist && docz build"
   },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-syntax-highlighter": "^10.1.1",
+    "rebass": "^3.0.0-11"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0-alpha",
+    "react-dom": "^16.7.0-alpha",
+    "styled-components": "^4.1.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
@@ -39,15 +49,8 @@
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
     "prettier": "^1.15.2",
+    "react": "^16.7.0-alpha",
+    "react-dom": "^16.7.0-alpha",
     "styled-components": "^4.1.1"
-  },
-  "peerDependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "styled-components": ">=4.0.0"
-  },
-  "dependencies": {
-    "prop-types": "^15.6.2",
-    "rebass": "^3.0.0-11"
   }
 }

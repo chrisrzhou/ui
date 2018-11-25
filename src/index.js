@@ -1,5 +1,12 @@
 export {default as colors} from './colors';
+export {default as Blockquote} from './Blockquote';
+export {default as Button} from './Button';
+export {default as ClipboardBox} from './CliboardBox';
+export {default as CodeBlock} from './CodeBlock';
 export {default as ColorPill} from './ColorPill';
+export {default as Divider} from './Divider';
+export {default as Heading} from './Heading';
 export {default as Link} from './Link';
+export {default as List} from './List';
 export {default as Logo} from './Logo';
 export {default as Text} from './Text';

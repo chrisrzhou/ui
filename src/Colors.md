@@ -1,5 +1,6 @@
 ---
-name: Colors
+name: Color
+order: -3
 ---
 
 import {Playground, PropsTable} from 'docz'
@@ -7,7 +8,7 @@ import {Box, Flex} from 'rebass';
 import ColorPill from './ColorPill';
 import colors from './colors';
 
-# Colors
+# Color
 
 Color generation and usage.
 
@@ -25,7 +26,7 @@ This results in the following core colors used across the site:
         return (
           <ColorPill
             key={colorKey}
-            color={colors[colorKey]}
+            color={colorKey}
             label={colorKey}
           />
         );
@@ -34,23 +35,25 @@ This results in the following core colors used across the site:
   </Flex>
 </Playground>
 
-## Complete Color Palette
+## Color Palette
 
-In general, the core colors above should be used. The complete color palette generated from `palx` could be used by accessing the array index of the respective color.
+It is adviced to only use the core colors defined above. The color palette generated from `palx` could be used in related data visualization projects.
+
+Each color in the palette can be intuitively accessed by the array index of the corresponding color e.g. `colors.green[3]`
 
 <Playground>
-  <Flex flexDirection="column">
+  <Box>
     {Object.keys(colors).map(colorKey => {
       if (Array.isArray(colors[colorKey])) {
         return (
-          <Flex key={colorKey} alignItems="center">
-            <Box width="100px">{colorKey}</Box>
+          <Flex key={colorKey}>
             {colors[colorKey].map((color, i) => {
+              const colorCode = colorKey + i;
               return (
                 <ColorPill
-                  key={color}
-                  color={color}
-                  label={colorKey + i}
+                  key={colorCode}
+                  color={colorCode}
+                  label={colorCode}
                 />
               );
             })}
@@ -58,5 +61,5 @@ In general, the core colors above should be used. The complete color palette gen
         );
       }
     })}
-  </Flex>
+  </Box>
 </Playground>

@@ -163,9 +163,8 @@ const palette = {
 
 export default {
   ...palette,
-  secondary: palette.gray[5],
-  primaryText: palette.black,
-  secondaryText: palette.gray[5],
-  highlight: palette.base,
-  disabled: palette.gray[2],
+  text: palette.black,
+  gray: palette.gray[6],
+  grayLight: palette.gray[3],
+  grayWhite: palette.gray[0],
 };

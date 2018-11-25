@@ -21,9 +21,13 @@ Site logo that links back to https://chrisrzhou.io.
 ## Customizable sizes
 
 <Playground>
-  <Flex flexDirection="column">
+  <Flex>
     <Logo size={20}/>
+  </Flex>
+  <Flex>
     <Logo size={40}/>
+  </Flex>
+  <Flex>
     <Logo size={100}/>
   </Flex>
 </Playground>

@@ -5,26 +5,48 @@ import {Text as RebassText} from 'rebass';
 import colors from './colors';
 
 const fontColors = {
-  primary: colors.primaryText,
-  secondary: colors.secondaryText,
-  highlight: colors.highlight,
-  disabled: colors.disabled,
+  base: colors.text,
+  light: colors.gray,
+  inverse: colors.grayWhite,
+  highlight: colors.base,
+  placeholder: colors.grayLight,
+  code: colors.gray,
 };
 
-function Text({children, variant}) {
+function Text({bold, children, fontSize, variant}) {
+  const isCode = variant === 'code';
+  const bg = isCode ? colors.grayWhite : undefined;
+  const fontFamily = isCode ? 'monaco, monospace' : 'system-ui, sans-serif';
   return (
-    <RebassText color={fontColors[variant]} fontFamily="system-ui, sans-serif">
+    <RebassText
+      as="span"
+      bg={bg}
+      color={fontColors[variant]}
+      fontFamily={fontFamily}
+      fontSize={fontSize}
+      fontWeight={bold ? 'bold' : undefined}
+      py={isCode && 1}
+      px={isCode && 2}>
       {children}
     </RebassText>
   );
 }
 
 Text.defaultProps = {
-  variant: 'primary',
+  variant: 'base',
 };
 
 Text.propTypes = {
-  variant: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'highlight']),
+  bold: PropTypes.bool,
+  fontSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  variant: PropTypes.oneOf([
+    'base',
+    'light',
+    'placeholder',
+    'highlight',
+    'inverse',
+    'code',
+  ]),
 };
 
 export default Text;
