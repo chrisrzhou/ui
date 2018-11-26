@@ -167,4 +167,5 @@ export default {
   gray: palette.gray[6],
   grayLight: palette.gray[3],
   grayWhite: palette.gray[0],
+  white: '#FFFFFF',
 };

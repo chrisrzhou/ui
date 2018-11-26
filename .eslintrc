@@ -1,17 +1,17 @@
 {
-  parser: 'babel-eslint',
-  extends: ['prettier'],
-  plugins: ['prettier'],
-  rules: {
-    'prettier/prettier': [
-      'error',
+  "parser": "babel-eslint",
+  "extends": ["prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
       {
-        bracketSpacing: false,
-        jsxBracketSameLine: true,
-        singleQuote: true,
-        trailingComma: 'all',
-        useTabs: false,
-      },
-    ],
-  },
+        "bracketSpacing": false,
+        "jsxBracketSameLine": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "useTabs": false
+      }
+    ]
+  }
 }

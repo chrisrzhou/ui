@@ -1,15 +1,15 @@
 ---
-name: Color
+name: Colors
 order: -3
 route: /colors
 ---
 
 import {Playground, PropsTable} from 'docz'
 import {Box, Flex} from 'rebass';
-import ColorBox from './ColorBox';
+import ColorBox from './components/ColorBox';
 import colors from './colors';
 
-# Color
+# Colors
 
 Color generation and usage.
 

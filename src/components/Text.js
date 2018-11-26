@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Text as RebassText} from 'rebass';
-
-import colors from './colors';
+import typography from './../typography';
+import colors from './../colors';
 
 const fontColors = {
   base: colors.text,
@@ -15,18 +15,16 @@ const fontColors = {
 
 function Text({bold, children, fontSize, variant}) {
   const isCode = variant === 'code';
-  const bg = isCode ? colors.grayWhite : undefined;
-  const fontFamily = isCode ? 'monaco, monospace' : 'system-ui, sans-serif';
+  const {color, ...typographyStyles} = typography.toJSON()[
+    isCode ? 'code' : 'body'
+  ];
   return (
     <RebassText
       as="span"
-      bg={bg}
+      css={typographyStyles}
       color={fontColors[variant]}
-      fontFamily={fontFamily}
       fontSize={fontSize}
-      fontWeight={bold ? 'bold' : undefined}
-      py={isCode && 1}
-      px={isCode && 2}>
+      fontWeight={bold ? 'bold' : undefined}>
       {children}
     </RebassText>
   );

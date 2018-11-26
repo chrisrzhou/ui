@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text} from 'rebass';
 
-import colors from './colors';
+import colors from './../colors';
 
 function Blockquote({children}) {
   return (

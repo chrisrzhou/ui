@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Flex} from 'rebass';
 import Link from './Link';
 import Text from './Text';
-import colors from './colors';
+import colors from './../colors';
 
 const {base: baseColor, gray} = colors;
 

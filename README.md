@@ -1,23 +1,22 @@
 # @chrisrzhou/ui
 
-Progressive design system, React UI components, and documentation for personal project
+Progressive + simple design system, React UI components, and documentation for personal projects.
 
-## Overview
+## Design System
 
-- [Colors](./Colors)
-- [Typography](./Typography)
-- [Animations](./Animations)
+- Colors
+- Typography
+- Animations
 - React components
 
 ## Philosophy
 
-- **Simple**: Less is better. Favor rapid progressive development over features.
-- **Atomic**: Self-contained and easy to compose.
-- **Intuitive**: UI and animations should provide intuitive feedback and response to user.
+- **👉 Simple**: Less is better. Favor rapid progressive development over features.
+- **👍 Intuitive**: UI and animations should provide intuitive feedback and response to user.
+- **⚛️ Atomic**: Self-contained and easy to compose.
 
 ## TODO
 
-- `Typography`
 - `globalStyles`
 - `Provider`
 - `Background`

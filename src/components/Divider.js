@@ -1,7 +1,7 @@
 import {Box} from 'rebass';
 import React from 'react';
 
-import colors from './colors';
+import colors from './../colors';
 
 function Divider({children, value}) {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link as RebassLink} from 'rebass';
 
-import colors from './colors';
+import colors from './../colors';
 
 function Link({children, disableTextDecoration, href, target}) {
   return (
