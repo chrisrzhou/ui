@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {Text} from 'rebass';
-
 import colors from './../colors';
 
 function Blockquote({children}) {
@@ -24,5 +24,9 @@ function Blockquote({children}) {
     </Text>
   );
 }
+
+Blockquote.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Blockquote;

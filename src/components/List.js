@@ -1,6 +1,7 @@
 import {Box, Flex} from 'rebass';
-import React from 'react';
+
 import PropTypes from 'prop-types';
+import React from 'react';
 
 function List({children, spacing}) {
   return (
@@ -13,6 +14,7 @@ function List({children, spacing}) {
 }
 
 List.propTypes = {
+  children: PropTypes.node.isRequired,
   spacing: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
 };
 

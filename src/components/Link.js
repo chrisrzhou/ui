@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {Link as RebassLink} from 'rebass';
-
 import colors from './../colors';
 
 function Link({children, disableTextDecoration, href, target}) {
@@ -29,6 +28,7 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
+  children: PropTypes.node.isRequired,
   disableTextDecoration: PropTypes.bool.isRequired,
   href: PropTypes.string,
   target: PropTypes.string,

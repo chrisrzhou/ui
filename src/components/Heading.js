@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {Text} from 'rebass';
 import typography from './../typography';
 
@@ -13,6 +13,7 @@ function Heading({level, children}) {
 }
 
 Heading.propTypes = {
+  children: PropTypes.node.isRequired,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
 

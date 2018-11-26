@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import {Flex} from 'rebass';
 import Link from './Link';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Text from './Text';
 import colors from './../colors';
 

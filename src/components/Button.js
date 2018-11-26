@@ -1,8 +1,7 @@
 import {Box} from 'rebass';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Text from './Text';
-
 import colors from './../colors';
 
 function Button({active, disabled, label, onClick}) {

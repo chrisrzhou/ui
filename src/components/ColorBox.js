@@ -1,9 +1,10 @@
 import {Box, Flex} from 'rebass';
-import React from 'react';
+
+import ClipboardBox from './ClipboardBox';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Text from './Text';
 import colors from './../colors';
-import ClipboardBox from './ClipboardBox';
 
 function getLuma(hex) {
   const hexValue = hex.replace(/#/, '');

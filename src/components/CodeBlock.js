@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism-light';
 import {ghcolors} from 'react-syntax-highlighter/dist/esm/styles/prism';
 

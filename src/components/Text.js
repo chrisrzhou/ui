@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {Text as RebassText} from 'rebass';
-import typography from './../typography';
 import colors from './../colors';
+import typography from './../typography';
 
 const fontColors = {
   base: colors.text,
@@ -36,6 +36,7 @@ Text.defaultProps = {
 
 Text.propTypes = {
   bold: PropTypes.bool,
+  children: PropTypes.node.isRequired,
   fontSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   variant: PropTypes.oneOf([
     'base',

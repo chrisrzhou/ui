@@ -1,5 +1,6 @@
 import {Box, Flex} from 'rebass';
 import React, {useState} from 'react';
+
 import PropTypes from 'prop-types';
 import Text from './Text';
 
@@ -62,6 +63,7 @@ function ClipboardBox({children, value}) {
 }
 
 ClipboardBox.propTypes = {
+  children: PropTypes.node.isRequired,
   value: PropTypes.string.isRequired,
 };
 

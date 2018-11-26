@@ -1,7 +1,6 @@
 // https://kyleamathews.github.io/typography.js/
 
 import Typography from 'typography';
-
 import colors from './colors';
 
 const typography = new Typography({
