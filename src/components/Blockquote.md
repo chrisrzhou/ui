@@ -8,15 +8,19 @@ import Blockquote from './Blockquote';
 
 # Blockquote
 
+Use the `Blockquote` component to highlight quoted text.
+
 <PropsTable of={Blockquote} />
 
 ## Basic
 
 <Playground>
-  <Blockquote>Hello world</Blockquote>
+  <Blockquote>
+    Formatting is <b>supported</b> (<i>including <code>code</code></i>).
+  </Blockquote>
 </Playground>
 
-## Nested
+## Nested Blockquotes
 
 <Playground>
   <Blockquote>

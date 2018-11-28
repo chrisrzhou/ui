@@ -1,6 +1,6 @@
 # @chrisrzhou/ui
 
-Progressive + simple design system, React UI components, and documentation for personal projects.
+Simple progressive design system and documentation for personal projects.
 
 ## Design System
 
@@ -11,9 +11,9 @@ Progressive + simple design system, React UI components, and documentation for p
 
 ## Philosophy
 
-- **👉 Simple**: Less is better. Favor rapid progressive development over features.
-- **👍 Intuitive**: UI and animations should provide intuitive feedback and response to user.
-- **⚛️ Atomic**: Self-contained and easy to compose.
+- **✌️ Simple**: Less is better. Simple to maintain, compose and evolve.
+- **👍 Intuitive**: UI and animations should provide intuitive feedback to users.
+- **👉 Progressive**: Favor rapid progressive development over features.
 
 ## TODO
 

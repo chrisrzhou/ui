@@ -4,7 +4,11 @@ order: -2
 route: /typography
 ---
 
+import {Playground} from 'docz'
+import {Flex} from 'rebass';
 import CodeBlock from './components/CodeBlock';
+import Heading from './components/Heading';
+import Text from './components/Text';
 import typography from './typography';
 
 # Typography
@@ -20,6 +24,18 @@ value={JSON.stringify(typography.options, null, 2)}
 
 ## Usage
 
-The `typography` styles are passed to `Text` and `Heading` components. They are also injected in the `Provider` component.
+The generated typography styles are passed to the `Text` and `Heading` components. They are also injected in the `Provider` component. This allows consistent application of typography styles across UI components and native DOM elements.
 
-This allows for consistent application of the generated typography styles across React components and native DOM elements (e.g. `h1`, `h2`, `h3`, `p`, `code` which can be generated via markdown parsing).
+<Playground>
+  <Flex flexDirection="column">
+    <Heading level={1}>Heading 1</Heading>
+    <Heading level={2}>Heading 2</Heading>
+    <Heading level={3}>Heading 3</Heading>
+    <Heading level={4}>Heading 4</Heading>
+    <Heading level={5}>Heading 5</Heading>
+    <Heading level={6}>Heading 6</Heading>
+    <Text>Regular Text</Text>
+    <Text bold>Bold Text</Text>
+    <Text variant="code">Code Text</Text>
+  </Flex>
+</Playground>

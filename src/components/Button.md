@@ -8,14 +8,14 @@ import Button from './Button';
 
 # Button
 
-Various button variants and usage
+Basic button element with support for active and disabled states.
 
 <PropsTable of={Button} />
 
 ## Basic
 
 <Playground>
-  <Button label="Base Button" />
+  <Button label="Basic Button" />
 </Playground>
 
 ## Active/Disabled
@@ -30,4 +30,10 @@ Various button variants and usage
   <p>
     <Button active disabled label="Disabled Active Button" />
   </p>
+</Playground>
+
+## onClick
+
+<Playground>
+  <Button label="Click me!" onClick={() => alert('Ouch!')}/>
 </Playground>

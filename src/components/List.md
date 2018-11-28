@@ -10,13 +10,13 @@ import List from './List';
 
 # List
 
-Render a list of components with consistent spacing
+Renders a list of components with consistent spacing.
 
 <PropsTable of={List} />
 
 ## Basic
 
-Any combination of components can be passed to `List`
+Any combination of components can be passed to `List`.
 
 <Playground>
   <h2>List of boxes</h2>

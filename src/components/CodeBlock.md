@@ -8,7 +8,7 @@ import CodeBlock from './CodeBlock';
 
 # CodeBlock
 
-Code formatting using prismjs and Github colors. More languages will be supported in the future
+Code formatting using `prismjs` and Github colors. A limited set of language (`js`, `css`, `bash`) is exposed. More languages can be easily added in the future
 
 <PropsTable of={CodeBlock} />
 

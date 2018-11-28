@@ -11,7 +11,7 @@ function Blockquote({children}) {
       bg={colors.grayWhite}
       css={`
         :before {
-          color: ${colors.gray};
+          color: ${colors.grayLight};
           content: open-quote;
           font-size: 4rem;
           line-height: 0.1em;

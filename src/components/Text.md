@@ -4,30 +4,48 @@ route: /components/text
 ---
 
 import {Playground, PropsTable} from 'docz'
-import {Box} from 'rebass';
+import {Flex} from 'rebass';
 import Text from './Text';
 
 # Text
 
-Basic text element
+Use the `Text` component to control color, font-size, weight, and alignment.
 
 <PropsTable of={Text} />
 
 ## Basic
 
 <Playground>
-  <p><Text>Hello world</Text></p>
-  <p><Text fontSize="10px">10px size</Text></p>
-  <p><Text fontSize="3em">3em size</Text></p>
+  <Text>Hello world</Text>
 </Playground>
 
 ## Variants
 
 <Playground>
-  <p><Text variant="base">Base</Text></p>
-  <p><Text variant="light">Light</Text></p>
-  <p><Text variant="highlight">Highlight</Text></p>
-  <p><Text variant="placeholder">Placeholder</Text></p>
-  <Box bg="black"><p><Text variant="inverse">Inverse</Text></p></Box>
-  <p><Text variant="code">Code</Text></p>
+  <Flex flexDirection="column">
+    <Text variant="base">Base</Text>
+    <Text variant="active">Active</Text>
+    <Text variant="light">Light</Text>
+    <Text variant="placeholder">Placeholder</Text>
+    <Flex bg="black"><Text variant="inverse">Inverse</Text></Flex>
+    <Text variant="code">Code</Text>
+  </Flex>
+</Playground>
+
+## Custom Font Size
+
+<Playground>
+  <Flex flexDirection="column">
+    <Text fontSize="3em">3em size</Text>
+    <Text fontSize="10px">10px size</Text>
+  </Flex>
+</Playground>
+
+## Formatting
+
+<Playground>
+  <Flex flexDirection="column">
+    <Text centered>Center-aligned text</Text>
+    <Text bold>Bold text</Text>
+  </Flex>
 </Playground>

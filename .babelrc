@@ -1,0 +1,12 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "loose": true
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": ["inline-react-svg"]
+}

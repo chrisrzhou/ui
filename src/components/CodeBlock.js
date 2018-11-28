@@ -5,10 +5,7 @@ import {ghcolors} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function CodeBlock({value, language}) {
   return (
-    <SyntaxHighlighter
-      language={language}
-      showLineNumbers={language !== 'bash'}
-      style={ghcolors}>
+    <SyntaxHighlighter language={language} showLineNumbers style={ghcolors}>
       {value}
     </SyntaxHighlighter>
   );

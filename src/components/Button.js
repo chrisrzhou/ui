@@ -8,7 +8,7 @@ function Button({active, disabled, label, onClick}) {
   return (
     <Box
       as="button"
-      bg={active ? colors.base : colors.grayWhite}
+      bg={active ? colors.base : colors.white}
       css={`
         border: 2px solid ${colors.base};
         cursor: pointer;
@@ -18,14 +18,14 @@ function Button({active, disabled, label, onClick}) {
         }
         :disabled {
           cursor: not-allowed;
-          opacity: 0.3;
+          opacity: 0.4;
         }
       `}
       disabled={disabled}
       onClick={onClick}
       px={3}
       py={2}>
-      <Text fontSize="14px" variant={active ? 'inverse' : 'highlight'}>
+      <Text bold variant={active ? 'inverse' : 'active'}>
         {label}
       </Text>
     </Box>

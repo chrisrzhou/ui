@@ -10,24 +10,26 @@ import ClipboardBox from './ClipboardBox';
 
 # ClipboardBox
 
-Simple wrapper component that supports copying provided string values to the clipboard.
+Simple component that wraps around any component and supports copying provided string values to the clipboard.
 
 <PropsTable of={ClipboardBox} />
 
 ## Basic
 
+`CliboardBox` works on any component.
+
 <Playground>
   <Flex>
     <ClipboardBox value="hello box">
-      <Box bg="#ddd" p={2} width="100px">
-        Box
+      <Box bg="#ddd" p={2}>
+        Click to Copy!
       </Box>
     </ClipboardBox>
   </Flex>
   <Flex>
     <ClipboardBox value="hello heading">
       <Heading level={1}>
-        Heading
+        Click to Copy!
       </Heading>
     </ClipboardBox>
   </Flex>

@@ -2,29 +2,30 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Text as RebassText} from 'rebass';
 import colors from './../colors';
-import typography from './../typography';
+import {getTypographyElementStyle} from './../typography';
 
 const fontColors = {
+  active: colors.base,
   base: colors.text,
-  light: colors.gray,
+  code: colors.base,
   inverse: colors.grayWhite,
-  highlight: colors.base,
+  light: colors.gray,
   placeholder: colors.grayLight,
-  code: colors.gray,
 };
 
-function Text({bold, children, fontSize, variant}) {
+function Text({bold, centered, children, fontSize, variant}) {
   const isCode = variant === 'code';
-  const {color, ...typographyStyles} = typography.toJSON()[
-    isCode ? 'code' : 'body'
-  ];
+  const typographyStyle = getTypographyElementStyle(isCode ? 'code' : 'body');
   return (
     <RebassText
-      as="span"
-      css={typographyStyles}
       color={fontColors[variant]}
+      css={{
+        ...typographyStyle,
+        display: 'inline-block',
+      }}
       fontSize={fontSize}
-      fontWeight={bold ? 'bold' : undefined}>
+      fontWeight={bold ? 'bold' : undefined}
+      textAlign={centered ? 'center' : undefined}>
       {children}
     </RebassText>
   );
@@ -36,16 +37,17 @@ Text.defaultProps = {
 
 Text.propTypes = {
   bold: PropTypes.bool,
+  centered: PropTypes.bool,
   children: PropTypes.node.isRequired,
   fontSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   variant: PropTypes.oneOf([
+    'active',
     'base',
+    'code',
+    'inverse',
     'light',
     'placeholder',
-    'highlight',
-    'inverse',
-    'code',
-  ]),
+  ]).isRequired,
 };
 
 export default Text;

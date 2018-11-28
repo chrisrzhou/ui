@@ -8,16 +8,17 @@ import Divider from './Divider';
 
 # Divider
 
-Simple page divider
+Simple page divider.
 
 <PropsTable of={Divider} />
 
 ## Basic
 
 <Playground>
-  <p>Some content before the divider.  Notice the margins before and after the divider.</p>
+  <p>(Some content before the divider)</p>
   <Divider />
-  <p>Some content after the divider</p>
+  <p>(Some content after the first divider with multiple dividers below)</p>
+  <Divider />
   <Divider />
   <Divider />
 </Playground>

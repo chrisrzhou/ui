@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@chrisrzhou/ui-logo</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Path" fill-rule="nonzero" x="-5.68434189e-14" y="0" width="250" height="250"></rect>
+        <rect id="Rectangle" fill="#97a0ab" fill-rule="nonzero" transform="translate(123.516504, 124.871843) scale(1, -1) rotate(45.000000) translate(-123.516504, -124.871843) " x="36.2911076" y="112.371843" width="174.450793" height="25"></rect>
+        <rect id="Rectangle" fill="#5ba8f8" fill-rule="nonzero" transform="translate(44.194174, 98.194174) scale(1, -1) rotate(45.000000) translate(-44.194174, -98.194174) " x="-5.80582618" y="85.6941738" width="100" height="25"></rect>
+        <rect id="Rectangle" fill="#5ba8f8" fill-rule="nonzero" transform="translate(44.194174, 151.194174) rotate(45.000000) translate(-44.194174, -151.194174) " x="-5.80582618" y="138.694174" width="100" height="25"></rect>
+        <rect id="Rectangle-Copy-2" fill="#5ba8f8" fill-rule="nonzero" transform="translate(203.194174, 98.194174) scale(-1, -1) rotate(45.000000) translate(-203.194174, -98.194174) " x="153.194174" y="85.6941738" width="100" height="25"></rect>
+        <rect id="Rectangle-Copy" fill="#5ba8f8" fill-rule="nonzero" transform="translate(203.194174, 151.194174) scale(-1, 1) rotate(45.000000) translate(-203.194174, -151.194174) " x="153.194174" y="138.694174" width="100" height="25"></rect>
+    </g>
+</svg>

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Progressive + simple design system, React UI components, and documentation for personal projects",
   "main": "dist/index.js",
+  "module": "dist/index.module.js",
   "keywords": [
     "chrisrzhou",
     "ui",
@@ -29,7 +30,8 @@
     "clean": "rm -rf dist",
     "lint": "eslint --fix src",
     "dev": "docz dev",
-    "build": "babel src -d dist && docz build"
+    "build": "rollup -c && docz build",
+    "size": "bundlesize"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
@@ -48,6 +50,8 @@
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "bundlesize": "^0.17.0",
     "docz": "^0.12.13",
     "emotion-theming": "^9.2.9",
     "eslint": "^5.9.0",
@@ -57,6 +61,14 @@
     "prettier": "^1.15.2",
     "react": "^16.7.0-alpha",
     "react-dom": "^16.7.0-alpha",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
     "styled-components": "^4.1.1"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/*.js",
+      "maxSize": "10 kB"
+    }
+  ]
 }

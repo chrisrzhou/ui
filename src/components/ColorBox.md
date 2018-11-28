@@ -9,13 +9,13 @@ import colors from './../colors';
 
 # ColorBox
 
-Renders a preview of the provided hex color, with clipboard copy support.
+Renders a preview of the provided color, with clipboard copy support.
 
 <PropsTable of={ColorBox} />
 
 ## Basic
 
-Render the corresponding color as long as a valid color key from `colors.js` is provided.
+Renders any valid color key in `colors.js`.
 
 <Playground>
   <ColorBox color="base" label="base" />
@@ -25,11 +25,11 @@ Render the corresponding color as long as a valid color key from `colors.js` is 
   <ColorBox color="green3" label="green3" />
 </Playground>
 
-## Custom colors / width
+## Custom Colors / Width
 
 Custom color hexes and widths can be provided.
 
 <Playground>
   <ColorBox color="#bb2211" label="Custom red" />
-  <ColorBox color={colors.base} label="custom width" width={300} />
+  <ColorBox color="#1122bb" label="custom blue and width" width={300} />
 </Playground>

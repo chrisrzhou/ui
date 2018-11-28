@@ -13,7 +13,6 @@ function Link({children, disableTextDecoration, href, target}) {
         text-decoration: ${disableTextDecoration ? 'none' : undefined};
         :hover {
           color: ${colors.base};
-          text-decoration: none;
         }
       `}
       href={href}
@@ -23,14 +22,10 @@ function Link({children, disableTextDecoration, href, target}) {
   );
 }
 
-Link.defaultProps = {
-  disableTextDecoration: false,
-};
-
 Link.propTypes = {
   children: PropTypes.node.isRequired,
-  disableTextDecoration: PropTypes.bool.isRequired,
-  href: PropTypes.string,
+  disableTextDecoration: PropTypes.bool,
+  href: PropTypes.string.isRequired,
   target: PropTypes.string,
 };
 

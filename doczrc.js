@@ -2,9 +2,7 @@ import colors from './src/colors';
 import typography from './src/typography';
 
 // merge typography.js styles with doczrc styles
-const {body, code, h1, h2, h3, h4, h5, h6} = typography.toJSON();
-const typographyStyles = {body, code, h1, h2, h3, h4, h5, h6};
-
+const {body, code, h1, h2, h3, h4, h5, h6, html} = typography.toJSON();
 export default {
   dest: 'dist/docs',
   files: '**/*.{md,mdx}',
@@ -39,7 +37,19 @@ export default {
       blockquoteColor: colors.gray,
     },
     showPlaygroundEditor: true,
-    styles: typographyStyles,
+    styles: {
+      body: {
+        ...html,
+        ...body,
+      },
+      code,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+    },
   },
   title: '@chrisrzhou/ui',
 };

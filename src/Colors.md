@@ -15,10 +15,10 @@ Color generation and usage.
 
 ## Core Colors
 
-Color palette generation is created using `palx` ([source](https://github.com/jxnblk/palx)) using the following base color:
+Color palette generation is created using `palx` ([link](https://github.com/jxnblk/palx)) using the following base color:
 <ColorBox color={colors.base} label="base" />
 
-This results in the following core colors used across the site:
+This results in the following generated core colors:
 
 <Playground>
   <Flex>
@@ -38,9 +38,9 @@ This results in the following core colors used across the site:
 
 ## Color Palette
 
-It is adviced to only use the core colors defined above. The color palette generated from `palx` could be used in related data visualization projects.
+In general, the core colors defined above should be used in UIs. However, the comprehensive color palette generated from `palx` could be used in related data visualization projects.
 
-Each color in the palette can be intuitively accessed by the array index of the corresponding color e.g. `colors.green[3]`
+Each color in the palette can be accessed by the array index of the corresponding color e.g. `colors.green[3]`
 
 <Playground>
   <Box>

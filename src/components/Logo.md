@@ -19,7 +19,7 @@ Site logo that links back to https://chrisrzhou.io.
   <Logo />
 </Playground>
 
-## Customizable sizes
+## Custom Sizes
 
 <Playground>
   <Flex>

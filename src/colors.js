@@ -168,4 +168,6 @@ export default {
   grayLight: palette.gray[3],
   grayWhite: palette.gray[0],
   white: '#FFFFFF',
+  blackAlpha: 'rgba(0, 0, 0, 0.8)',
+  whiteAlpha: 'rgba(255, 255, 255, 0.8)',
 };

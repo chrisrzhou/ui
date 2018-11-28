@@ -9,7 +9,7 @@ import Link from './Link';
 
 # Heading
 
-Basic heading element
+Supports six heading elements `h1`, `h2`, `h3`, `h4`, `h5`, `h6`.
 
 <PropsTable of={Heading} />
 
@@ -27,7 +27,7 @@ Basic heading element
 ## With Link
 
 <Playground>
-  <Link href="https://github.com/chrisrzhou/ui">
+  <Link disableTextDecoration href="https://github.com/chrisrzhou/ui">
     <Heading level={1}>Heading 1</Heading>
   </Link>
 </Playground>

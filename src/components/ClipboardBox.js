@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 import PropTypes from 'prop-types';
 import Text from './Text';
+import colors from './../colors';
 
 function ClipboardBox({children, value}) {
   const [copied, setCopied] = useState(false);
@@ -27,6 +28,8 @@ function ClipboardBox({children, value}) {
         display: inline-block;
         position: relative;
         transition: all 0.125s ease;
+        height: fit-content;
+        width: fit-content;
         &:hover {
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.08),
             0 16px 16px 0 rgba(0, 0, 0, 0.08);
@@ -43,7 +46,7 @@ function ClipboardBox({children, value}) {
       {children}
       <Flex
         alignItems="center"
-        bg="rgba(0, 0, 0, 0.8)"
+        bg={colors.blackAlpha}
         className="colorpill-copy"
         css={`
           opacity: 0;
