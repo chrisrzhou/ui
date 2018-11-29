@@ -1,4 +1,5 @@
 export {default as colors} from './colors';
+export {default as iconography} from './iconography';
 export {default as typography} from './typography';
 export {default as Blockquote} from './components/Blockquote';
 export {default as Button} from './components/Button';
@@ -7,6 +8,8 @@ export {default as CodeBlock} from './components/CodeBlock';
 export {default as ColorBox} from './components/ColorBox';
 export {default as Divider} from './components/Divider';
 export {default as Heading} from './components/Heading';
+export {default as Icon} from './components/Icon';
+export {default as Image} from './components/Image';
 export {default as Link} from './components/Link';
 export {default as List} from './components/List';
 export {default as Logo} from './components/Logo';

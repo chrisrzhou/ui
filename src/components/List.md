@@ -49,7 +49,7 @@ Any combination of components can be passed to `List`.
 ## Flex-wrap Support
 
 <Playground>
-  <List>
+  <List wrap>
     <Box bg="#ddd" p={3} width="200px"/>
     <Box bg="#ddd" p={3} width="200px"/>
     <Box bg="#ddd" p={3} width="200px"/>

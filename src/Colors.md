@@ -1,12 +1,13 @@
 ---
 name: Colors
-order: -3
+order: -4
 route: /colors
 ---
 
-import {Playground, PropsTable} from 'docz'
-import {Box, Flex} from 'rebass';
+import {Playground} from 'docz'
+import {Box} from 'rebass';
 import ColorBox from './components/ColorBox';
+import List from './components/List';
 import colors from './colors';
 
 # Colors
@@ -21,9 +22,10 @@ Color palette generation is created using `palx` ([link](https://github.com/jxnb
 This results in the following generated core colors:
 
 <Playground>
-  <Flex>
-    {Object.keys(colors).map(colorKey => {
-      if (typeof colors[colorKey] === 'string') {
+  <List>
+    {Object.keys(colors)
+      .filter(colorKey => typeof colors[colorKey] === 'string')
+      .map(colorKey => {
         return (
           <ColorBox
             key={colorKey}
@@ -31,9 +33,8 @@ This results in the following generated core colors:
             label={colorKey}
           />
         );
-      }
-    })}
-  </Flex>
+      })}
+  </List>
 </Playground>
 
 ## Color Palette
@@ -47,7 +48,7 @@ Each color in the palette can be accessed by the array index of the correspondin
     {Object.keys(colors).map(colorKey => {
       if (Array.isArray(colors[colorKey])) {
         return (
-          <Flex key={colorKey}>
+          <List key={colorKey} spacing={0}>
             {colors[colorKey].map((color, i) => {
               const colorCode = colorKey + i;
               return (
@@ -58,7 +59,7 @@ Each color in the palette can be accessed by the array index of the correspondin
                 />
               );
             })}
-          </Flex>
+          </List>
         );
       }
     })}

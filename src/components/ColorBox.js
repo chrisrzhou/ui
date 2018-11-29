@@ -47,7 +47,7 @@ function ColorBox({color, label, width}) {
   const colorHex = getColorHex(color);
   return (
     <ClipboardBox value={colorHex}>
-      <Box bg={colorHex} m={1} p={2} width={width}>
+      <Box bg={colorHex} p={2} width={width}>
         <Text
           fontSize="10px"
           variant={getLuma(colorHex) > 0.5 ? 'base' : 'inverse'}>

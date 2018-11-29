@@ -4,8 +4,9 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text';
 import colors from './../colors';
+import {hoverActiveClickCSS} from './../css';
 
-function ClipboardBox({children, value}) {
+function ClipboardBox({children, message, value}) {
   const [copied, setCopied] = useState(false);
 
   function copyToClipboard() {
@@ -20,26 +21,12 @@ function ClipboardBox({children, value}) {
     setCopied(true);
   }
 
-  const message = copied ? 'Copied!' : 'Click to copy';
   return (
     <Box
       css={`
-        cursor: pointer;
         display: inline-block;
         position: relative;
-        transition: all 0.125s ease;
-        height: fit-content;
-        width: fit-content;
-        &:hover {
-          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.08),
-            0 16px 16px 0 rgba(0, 0, 0, 0.08);
-          .colorpill-copy {
-            opacity: 1;
-          }
-        }
-        &:active {
-          transform: scale(0.9);
-        }
+        ${hoverActiveClickCSS};
       `}
       onClick={copyToClipboard}
       onMouseLeave={setCopied.bind(null, false)}>
@@ -47,7 +34,6 @@ function ClipboardBox({children, value}) {
       <Flex
         alignItems="center"
         bg={colors.blackAlpha}
-        className="colorpill-copy"
         css={`
           opacity: 0;
           position: absolute;
@@ -55,17 +41,25 @@ function ClipboardBox({children, value}) {
           left: 0;
           right: 0;
           top: 0;
+          :hover {
+            opacity: 1;
+          }
         `}
         justifyContent="center">
         <Text fontSize="10px" variant="inverse">
-          {message}
+          {copied ? 'Copied!' : message}
         </Text>
       </Flex>
     </Box>
   );
 }
 
+ClipboardBox.defaultProps = {
+  message: 'Click to copy',
+};
+
 ClipboardBox.propTypes = {
+  message: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   value: PropTypes.string.isRequired,
 };

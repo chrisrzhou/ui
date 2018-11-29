@@ -16,7 +16,7 @@ Simple component that wraps around any component and supports copying provided s
 
 ## Basic
 
-`CliboardBox` works on any component.
+`ClipboardBox` works on any component.
 
 <Playground>
   <Flex>
@@ -33,4 +33,14 @@ Simple component that wraps around any component and supports copying provided s
       </Heading>
     </ClipboardBox>
   </Flex>
+</Playground>
+
+## Custom Copy Message
+
+<Playground>
+    <ClipboardBox message="Don't ever try to click me" value="How dare you!">
+      <Box bg="#ddd" p={2}>
+        Hover to read copy message
+      </Box>
+    </ClipboardBox>
 </Playground>

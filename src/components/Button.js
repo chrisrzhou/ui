@@ -1,3 +1,5 @@
+import {disabledClickCSS, hoverActiveClickCSS} from './../css';
+
 import {Box} from 'rebass';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -11,15 +13,9 @@ function Button({active, disabled, label, onClick}) {
       bg={active ? colors.base : colors.white}
       css={`
         border: 2px solid ${colors.base};
-        cursor: pointer;
         outline: none;
-        :hover {
-          opacity: 0.7;
-        }
-        :disabled {
-          cursor: not-allowed;
-          opacity: 0.4;
-        }
+        ${hoverActiveClickCSS}
+        ${disabledClickCSS}
       `}
       disabled={disabled}
       onClick={onClick}

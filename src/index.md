@@ -1,6 +1,6 @@
 ---
-name: Getting Started
-order: -4
+name: Overview
+order: -5
 route: /
 ---
 
