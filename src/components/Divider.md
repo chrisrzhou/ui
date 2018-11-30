@@ -1,5 +1,4 @@
 ---
-name: Divider
 route: /components/divider
 ---
 

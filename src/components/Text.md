@@ -1,5 +1,4 @@
 ---
-name: Text
 route: /components/text
 ---
 

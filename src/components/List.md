@@ -1,5 +1,4 @@
 ---
-name: List
 route: /components/list
 ---
 

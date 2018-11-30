@@ -1,5 +1,4 @@
 ---
-name: Button
 route: /components/button
 ---
 

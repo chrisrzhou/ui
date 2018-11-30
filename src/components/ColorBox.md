@@ -1,5 +1,4 @@
 ---
-name: ColorBox
 route: /components/color-box
 ---
 

@@ -1,5 +1,4 @@
 ---
-name: Blockquote
 route: /components/blockquote
 ---
 

@@ -58,7 +58,7 @@ Simple progressive design system and documentation for personal projects.
 - `Spinner`
 - `DatePicker`
 - `ColorPicker`
-- `Shimmer`
+- `Skeleton`
 - `PageSpinner` (uses `Spinner`)
 - Add documentation for `css.js`.
 - Animations (composable with components)

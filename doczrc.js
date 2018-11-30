@@ -10,6 +10,7 @@ export default {
   htmlContext: {
     favicon: 'public/favicon.ico',
   },
+  menu: ['Overview', 'Colors', 'Iconography', 'Typography', 'Animations'],
   ordering: 'ascending',
   public: 'docz/public',
   src: '',

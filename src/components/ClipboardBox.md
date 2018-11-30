@@ -1,5 +1,4 @@
 ---
-name: ClipboardBox
 route: /components/clipboard-box
 ---
 

@@ -1,5 +1,4 @@
 ---
-name: Link
 route: /components/link
 ---
 

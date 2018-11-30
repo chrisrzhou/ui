@@ -1,6 +1,4 @@
 ---
-name: Typography
-order: -3
 route: /typography
 ---
 

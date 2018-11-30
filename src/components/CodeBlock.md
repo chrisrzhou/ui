@@ -1,5 +1,4 @@
 ---
-name: CodeBlock
 route: /components/code-block
 ---
 

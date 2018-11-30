@@ -1,6 +1,4 @@
 ---
-name: Overview
-order: -5
 route: /
 ---
 

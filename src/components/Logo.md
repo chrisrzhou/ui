@@ -1,5 +1,4 @@
 ---
-name: Logo
 route: /components/logo
 ---
 

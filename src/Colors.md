@@ -1,6 +1,4 @@
 ---
-name: Colors
-order: -4
 route: /colors
 ---
 

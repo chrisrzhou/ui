@@ -27,7 +27,7 @@
   "homepage": "https://ui.chrisrzhou.io",
   "scripts": {
     "prepare": "yarn clean && yarn build",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist .docz",
     "lint": "eslint --fix src",
     "dev": "docz dev",
     "build": "rollup -c && docz build",
@@ -43,6 +43,7 @@
   "peerDependencies": {
     "react": "^16.7.0-alpha",
     "react-dom": "^16.7.0-alpha",
+    "react-spring": "^6.1.10",
     "styled-components": "^4.1.1"
   },
   "devDependencies": {
@@ -62,6 +63,7 @@
     "prettier": "^1.15.2",
     "react": "^16.7.0-alpha",
     "react-dom": "^16.7.0-alpha",
+    "react-spring": "^6.1.10",
     "rollup": "^0.67.3",
     "rollup-plugin-babel": "^4.0.3",
     "styled-components": "^4.1.1"

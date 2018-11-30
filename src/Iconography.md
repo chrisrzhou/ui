@@ -1,6 +1,4 @@
 ---
-name: Iconography
-order: -2
 route: /iconography
 ---
 

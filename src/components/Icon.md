@@ -1,5 +1,4 @@
 ---
-name: Icon
 route: /components/icon
 ---
 

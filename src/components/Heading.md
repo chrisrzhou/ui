@@ -1,5 +1,4 @@
 ---
-name: Heading
 route: /components/heading
 ---
 

@@ -1,5 +1,4 @@
 ---
-name: Image
 route: /components/image
 ---
 
