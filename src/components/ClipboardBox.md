@@ -2,7 +2,7 @@
 route: /components/clipboard-box
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import {Box, Flex} from 'rebass';
 import Heading from './Heading';
 import ClipboardBox from './ClipboardBox';

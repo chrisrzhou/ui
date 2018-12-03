@@ -2,7 +2,7 @@
 route: /components/color-box
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import ColorBox from './ColorBox';
 import colors from './../colors';
 

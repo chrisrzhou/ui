@@ -30,7 +30,8 @@
     "clean": "rm -rf dist .docz",
     "lint": "eslint --fix src",
     "dev": "docz dev",
-    "build": "rollup -c && docz build",
+    "build": "rollup -c",
+    "build:docs": "docz build",
     "size": "bundlesize"
   },
   "dependencies": {

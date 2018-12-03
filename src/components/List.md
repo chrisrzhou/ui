@@ -2,7 +2,7 @@
 route: /components/list
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import {Box} from 'rebass';
 import ColorBox from './ColorBox';
 import List from './List';

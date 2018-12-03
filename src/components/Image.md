@@ -2,7 +2,7 @@
 route: /components/image
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import Image from './Image';
 
 # Image

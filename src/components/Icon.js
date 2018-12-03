@@ -1,19 +1,22 @@
+import colors, {getColorValue} from './../colors';
+
 import {Box} from 'rebass';
 import PropTypes from 'prop-types';
 import React from 'react';
-import colors from './../colors';
-import {hoverFadeCSS} from './../css';
+import {clickCSS} from './../css';
 import iconography from './../iconography';
 
-function Icon({active, icon, size, onClick}) {
+function Icon({active, color, icon, size, onClick, ...otherProps}) {
   return (
     <Box
+      {...otherProps}
       css={`
         cursor: ${onClick ? 'pointer' : undefined};
+        display: inline-flex;
         svg {
-          ${hoverFadeCSS};
+          ${onClick ? clickCSS : ''};
           path {
-            fill: ${active ? colors.base : undefined};
+            fill: ${active ? colors.base : getColorValue(color)};
           }
           height: ${size}px;
           width: ${size}px;
@@ -26,11 +29,13 @@ function Icon({active, icon, size, onClick}) {
 }
 
 Icon.defaultProps = {
+  color: colors.black,
   size: 20,
 };
 
 Icon.propTypes = {
   active: PropTypes.bool,
+  color: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
   onClick: PropTypes.func,

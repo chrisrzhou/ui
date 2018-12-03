@@ -2,8 +2,9 @@
 route: /components/icon
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import Icon from './Icon';
+import List from './List';
 
 # Icon
 
@@ -14,18 +15,26 @@ Renders an [octicon](https://github.com/primer/octicons) icon given a valid icon
 ## Basic
 
 <Playground>
-  <Icon icon="octoface" />
-  <Icon icon="bug" />
-  <Icon icon="credit-card" />
-  <Icon active icon="credit-card" />
+  <List>
+    <Icon icon="octoface" />
+    <Icon icon="bug" />
+    <Icon icon="credit-card" />
+    <Icon active icon="credit-card" />
+  </List>
 </Playground>
 
-## Custom Sizes
+## Custom Colors and Sizes
+
+Accepts any valid color from `colors.js` and numeric pixel sizes.
 
 <Playground>
-  <Icon icon="octoface" />
-  <Icon icon="octoface" size={30} />
-  <Icon icon="octoface" size={50} />
+  <List>
+    <Icon icon="octoface" />
+    <Icon icon="octoface" color="cyan7" />
+    <Icon icon="octoface" color="green8" />
+    <Icon icon="octoface" size={50} />
+    <Icon icon="octoface" size={100} />
+  </List>
 </Playground>
 
 ## onClick

@@ -2,7 +2,7 @@
 route: /colors
 ---
 
-import {Playground} from 'docz'
+import {Playground} from 'docz';
 import {Box} from 'rebass';
 import ColorBox from './components/ColorBox';
 import List from './components/List';
@@ -20,7 +20,7 @@ Color palette generation is created using `palx` ([link](https://github.com/jxnb
 This results in the following generated core colors:
 
 <Playground>
-  <List>
+  <List wrap>
     {Object.keys(colors)
       .filter(colorKey => typeof colors[colorKey] === 'string')
       .map(colorKey => {

@@ -19,7 +19,6 @@ Simple progressive design system and documentation for personal projects.
 ## TODO
 
 - `Anchor`
-- `BackTop`
 - `Provider`
 - `Progress` (line/donut with color)
 - `Notification`
@@ -28,7 +27,6 @@ Simple progressive design system and documentation for personal projects.
 - `Banner`
 - `BackgroundImage`
 - `Badge`
-- `Tag`
 - `Timeline`
 - `Collapse`
 - `Carousel`
@@ -41,7 +39,6 @@ Simple progressive design system and documentation for personal projects.
 - `Tooltip`
 - `Popover` (tooltip with any content)
 - `Hug`
-- `Position`
 - `IconButton`
 - `Input` (number, string, email, password, textarea, validation)
 - `Label`
@@ -55,12 +52,13 @@ Simple progressive design system and documentation for personal projects.
 - `TabSet`
 - `ButtonSet`
 - `Truncate` (support in text as default)
-- `Spinner`
 - `DatePicker`
 - `ColorPicker`
 - `Skeleton`
 - `PageSpinner` (uses `Spinner`)
+- Add enum sizes for icons instead of manual sizes
 - Add documentation for `css.js`.
 - Animations (composable with components)
 - Reduce usage of custom `css` props, and rely on animation framework
 - Group components (data, input, display, navigation etc)
+- Pass all rebass props down (other props)

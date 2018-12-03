@@ -2,7 +2,7 @@
 route: /components/link
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import Link from './Link';
 
 # Link

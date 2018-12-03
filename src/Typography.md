@@ -2,7 +2,7 @@
 route: /typography
 ---
 
-import {Playground} from 'docz'
+import {Playground} from 'docz';
 import {Flex} from 'rebass';
 import CodeBlock from './components/CodeBlock';
 import Heading from './components/Heading';

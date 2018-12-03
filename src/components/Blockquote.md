@@ -2,7 +2,7 @@
 route: /components/blockquote
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import Blockquote from './Blockquote';
 
 # Blockquote

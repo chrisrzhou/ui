@@ -2,7 +2,7 @@
 route: /components/heading
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import Heading from './Heading';
 import Link from './Link';
 

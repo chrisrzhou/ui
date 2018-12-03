@@ -2,7 +2,7 @@
 route: /components/code-block
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import CodeBlock from './CodeBlock';
 
 # CodeBlock

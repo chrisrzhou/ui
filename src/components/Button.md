@@ -2,7 +2,7 @@
 route: /components/button
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import Button from './Button';
 
 # Button

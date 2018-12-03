@@ -2,7 +2,7 @@
 route: /components/logo
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import {Flex} from 'rebass'
 import Logo from './Logo';
 

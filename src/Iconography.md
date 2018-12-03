@@ -2,7 +2,7 @@
 route: /iconography
 ---
 
-import {Playground} from 'docz'
+import {Playground} from 'docz';
 import {Flex} from 'rebass';
 import iconography from './iconography';
 import ClipboardBox from './components/ClipboardBox';

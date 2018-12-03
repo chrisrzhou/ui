@@ -2,7 +2,7 @@
 route: /components/divider
 ---
 
-import {Playground, PropsTable} from 'docz'
+import {Playground, PropsTable} from 'docz';
 import Divider from './Divider';
 
 # Divider

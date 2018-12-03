@@ -2,6 +2,6 @@
 route: /
 ---
 
-import Readme from './../README.md'
+import Readme from './../README.md';
 
 <Readme />

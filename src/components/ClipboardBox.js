@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 
 import PropTypes from 'prop-types';
 import Text from './Text';
+import {clickCSS} from './../css';
 import colors from './../colors';
-import {hoverActiveClickCSS} from './../css';
 
 function ClipboardBox({children, message, value}) {
   const [copied, setCopied] = useState(false);
@@ -26,7 +26,7 @@ function ClipboardBox({children, message, value}) {
       css={`
         display: inline-block;
         position: relative;
-        ${hoverActiveClickCSS};
+        ${clickCSS};
       `}
       onClick={copyToClipboard}
       onMouseLeave={setCopied.bind(null, false)}>

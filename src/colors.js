@@ -161,7 +161,44 @@ const palette = {
   ],
 };
 
-export default {
+/* colorInput can be of the following valid formats:
+ * - valid color key: 'base', 'gray', 'grayWhite'
+ * - valid hex or rgba color: '#aabb11', 'rgba(0, 0, 0, 0.3)'
+ * - valid palette color: 'gray1', 'green3', 'red9'
+ */
+export function getColorValue(colorInput) {
+  const paletteColorIndex = colorInput.length - 1;
+  const paletteColor = colors[colorInput.slice(0, paletteColorIndex)];
+  if (colors[colorInput]) {
+    return colors[colorInput];
+  } else if (paletteColor) {
+    return paletteColor[colorInput[paletteColorIndex]];
+  } else {
+    return colorInput;
+  }
+}
+
+export function getTextVariantFromColor(color) {
+  let r = 0;
+  let g = 0;
+  let b = 0;
+  if (color.includes('rgba')) {
+    const rgbaColor = color
+      .replace('rgba(', '')
+      .replace(')', '')
+      .split(',');
+    r = parseInt(rgbaColor[0], 10);
+    g = parseInt(rgbaColor[1], 10);
+    b = parseInt(rgbaColor[2], 10);
+  } else if (color[0] === '#') {
+    r = parseInt(color.substr(1, 2), 16);
+    g = parseInt(color.substr(3, 2), 16);
+    b = parseInt(color.substr(5, 2), 16);
+  }
+  return 0.299 * r + 0.587 * g + 0.114 * b > 186 ? 'base' : 'inverse';
+}
+
+const colors = {
   ...palette,
   text: palette.black,
   gray: palette.gray[6],
@@ -171,3 +208,5 @@ export default {
   blackAlpha: 'rgba(0, 0, 0, 0.8)',
   whiteAlpha: 'rgba(255, 255, 255, 0.8)',
 };
+
+export default colors;

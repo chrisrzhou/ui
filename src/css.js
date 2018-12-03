@@ -1,10 +1,10 @@
-export const hoverFadeCSS = `
+export const hoverCSS = `
   :hover {
-    opacity: 0.7;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   }
 `;
 
-export const hoverActiveClickCSS = `
+export const clickCSS = `
   cursor: pointer;
   transition: all 0.125s ease;
   :active {
@@ -13,15 +13,9 @@ export const hoverActiveClickCSS = `
       transform: none;
     }
   }
-  :hover {
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.08),
-      0 8px 8px 0 rgba(0, 0, 0, 0.08);
-  }
-`;
-
-export const disabledClickCSS = `
   :disabled {
     cursor: not-allowed;
     opacity: 0.4;
   }
+  ${hoverCSS}
 `;
