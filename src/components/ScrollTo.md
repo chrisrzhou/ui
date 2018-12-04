@@ -23,7 +23,7 @@ A wrapping component implementing `window.scrollTo`.
       <ScrollTo y={1000}><Button label="scroll to bottom" /></ScrollTo>
     </Position>
     <Position bottom={0}>
-      <ScrollTo><Icon icon="arrow-up" size={40} /></ScrollTo>
+      <ScrollTo><Icon icon="arrow-up" size="large" /></ScrollTo>
     </Position>
   </Position>
 </Playground>

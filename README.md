@@ -31,9 +31,7 @@ Simple progressive design system and documentation for personal projects.
 - `Collapse`
 - `Carousel`
 - `Breadcrumb`
-- `Card`
 - `Checkbox`
-- `Container`
 - `FormField` (uses `Input`, `Label`, similar to `FormRow`)
 - `Form` (uses `FormField`)
 - `Tooltip`
@@ -51,14 +49,13 @@ Simple progressive design system and documentation for personal projects.
 - `Toggle`
 - `TabSet`
 - `ButtonSet`
-- `Truncate` (support in text as default)
 - `DatePicker`
 - `ColorPicker`
-- `Skeleton`
 - `PageSpinner` (uses `Spinner`)
-- Add enum sizes for icons instead of manual sizes
 - Add documentation for `css.js`.
-- Animations (composable with components)
 - Reduce usage of custom `css` props, and rely on animation framework
 - Group components (data, input, display, navigation etc)
 - Pass all rebass props down (other props)
+- HOCs
+  - withAnimation
+  - withTooltip

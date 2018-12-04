@@ -46,7 +46,7 @@ function ClipboardBox({children, message, value}) {
           }
         `}
         justifyContent="center">
-        <Text fontSize="10px" variant="inverse">
+        <Text centered fontSize="small" variant="inverse">
           {copied ? 'Copied!' : message}
         </Text>
       </Flex>

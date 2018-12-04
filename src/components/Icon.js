@@ -6,6 +6,12 @@ import React from 'react';
 import {clickCSS} from './../css';
 import iconography from './../iconography';
 
+const SIZES = {
+  small: 14,
+  medium: 20,
+  large: 40,
+};
+
 function Icon({active, color, icon, size, onClick, ...otherProps}) {
   return (
     <Box
@@ -18,8 +24,8 @@ function Icon({active, color, icon, size, onClick, ...otherProps}) {
           path {
             fill: ${active ? colors.base : getColorValue(color)};
           }
-          height: ${size}px;
-          width: ${size}px;
+          height: ${SIZES[size]}px;
+          width: ${SIZES[size]}px;
         }
       `}
       dangerouslySetInnerHTML={{__html: iconography[icon]}}
@@ -30,14 +36,14 @@ function Icon({active, color, icon, size, onClick, ...otherProps}) {
 
 Icon.defaultProps = {
   color: colors.black,
-  size: 20,
+  size: 'medium',
 };
 
 Icon.propTypes = {
   active: PropTypes.bool,
   color: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  size: PropTypes.number.isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   onClick: PropTypes.func,
 };
 

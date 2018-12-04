@@ -3,6 +3,7 @@ import React from 'react';
 import {Text as RebassText} from 'rebass';
 import colors from './../colors';
 import {getTypographyElementStyle} from './../typography';
+import {textTruncateCSS} from './../css';
 
 const fontColors = {
   active: colors.base,
@@ -13,25 +14,34 @@ const fontColors = {
   placeholder: colors.grayLight,
 };
 
-function Text({bold, centered, children, fontSize, variant}) {
+const FONT_SIZES = {
+  small: '10px',
+  medium: '16px',
+  large: '32px',
+};
+
+function Text({bold, centered, children, fontSize, truncate, variant}) {
   const isCode = variant === 'code';
   const typographyStyle = getTypographyElementStyle(isCode ? 'code' : 'body');
   return (
     <RebassText
-      color={fontColors[variant]}
-      css={{
+      css={`
+        ${truncate ? textTruncateCSS : ''}
+      `}
+      style={{
         ...typographyStyle,
-        display: 'inline-block',
-      }}
-      fontSize={fontSize}
-      fontWeight={bold ? 'bold' : undefined}
-      textAlign={centered ? 'center' : undefined}>
+        color: fontColors[variant],
+        fontWeight: bold ? 'bold' : undefined,
+        fontSize: FONT_SIZES[fontSize],
+        textAlign: centered ? 'center' : undefined,
+      }}>
       {children}
     </RebassText>
   );
 }
 
 Text.defaultProps = {
+  truncate: false,
   variant: 'base',
 };
 
@@ -39,7 +49,8 @@ Text.propTypes = {
   bold: PropTypes.bool,
   centered: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  fontSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  fontSize: PropTypes.oneOf(['small', 'medium', 'large']),
+  truncate: PropTypes.bool,
   variant: PropTypes.oneOf([
     'active',
     'base',

@@ -10,13 +10,13 @@ import Text from './Text';
 function Tag({label, color, onClick, onRemove}) {
   const colorValue = getColorValue(color);
   const textVariant = getTextVariantFromColor(colorValue);
-  const removeIcon = onRemove && (
+  const RemoveIcon = onRemove && (
     <Icon
       color={textVariant === 'base' ? '#000' : '#fff'}
       ml={1}
       icon="x"
       onClick={onRemove}
-      size={12}
+      size="small"
     />
   );
   return (
@@ -30,10 +30,10 @@ function Tag({label, color, onClick, onRemove}) {
       px={2}
       py={1}
       onClick={onClick}>
-      <Text fontSize="10px" variant={textVariant}>
+      <Text fontSize="small" variant={textVariant}>
         {label}
       </Text>
-      {removeIcon}
+      {RemoveIcon}
     </Flex>
   );
 }

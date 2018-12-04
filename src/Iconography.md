@@ -32,7 +32,7 @@ Use the `Icon` component to render icons with customizable sizes and states.
             pb={3}
             width="120px">
             <Icon icon={icon} />
-            <Text fontSize="10px">{icon}</Text>
+            <Text fontSize="small">{icon}</Text>
           </Flex>
         </ClipboardBox>
       );

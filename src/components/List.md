@@ -6,6 +6,7 @@ import {Playground, PropsTable} from 'docz';
 import {Box} from 'rebass';
 import ColorBox from './ColorBox';
 import List from './List';
+import colors from './../colors';
 
 # List
 
@@ -20,11 +21,11 @@ Any combination of components can be passed to `List`.
 <Playground>
   <h2>List of boxes</h2>
   <List>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
   </List>
   <h2>List of color pills</h2>
   <List>
@@ -37,9 +38,9 @@ Any combination of components can be passed to `List`.
   <h2>List of mixed components</h2>
   <List>
     <ColorBox color="base" label="Color Pill"/>
-    <Box bg="#ddd" p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
     <ColorBox color="gray" label="Color Pill"/>
-    <Box bg="#ddd" p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
     <div>Some Text</div>
     <ColorBox color="grayLight" label="Color Pill"/>
   </List>
@@ -49,11 +50,11 @@ Any combination of components can be passed to `List`.
 
 <Playground>
   <List wrap>
-    <Box bg="#ddd" p={3} width="200px"/>
-    <Box bg="#ddd" p={3} width="200px"/>
-    <Box bg="#ddd" p={3} width="200px"/>
-    <Box bg="#ddd" p={3} width="200px"/>
-    <Box bg="#ddd" p={3} width="200px"/>
+    <Box bg={colors.gray} p={3} width="200px"/>
+    <Box bg={colors.gray} p={3} width="200px"/>
+    <Box bg={colors.gray} p={3} width="200px"/>
+    <Box bg={colors.gray} p={3} width="200px"/>
+    <Box bg={colors.gray} p={3} width="200px"/>
   </List>
 </Playground>
 
@@ -61,10 +62,10 @@ Any combination of components can be passed to `List`.
 
 <Playground>
   <List spacing={3}>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
-    <Box bg="#ddd" p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box bg={colors.gray} p={3} width="100px"/>
   </List>
 </Playground>

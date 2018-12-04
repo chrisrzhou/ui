@@ -1,6 +1,15 @@
+export const boxShadowStyle = '0 2px 8px rgba(0, 0, 0, 0.25)';
+
+export const textTruncateCSS = `
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+`;
+
 export const hoverCSS = `
   :hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    box-shadow: ${boxShadowStyle};
   }
 `;
 

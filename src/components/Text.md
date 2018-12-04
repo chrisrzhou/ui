@@ -3,8 +3,9 @@ route: /components/text
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Flex} from 'rebass';
+import {Box, Flex} from 'rebass';
 import Text from './Text';
+import colors from './../colors';
 
 # Text
 
@@ -35,8 +36,10 @@ Use the `Text` component to control color, font-size, weight, and alignment.
 
 <Playground>
   <Flex flexDirection="column">
-    <Text fontSize="3em">3em size</Text>
-    <Text fontSize="10px">10px size</Text>
+    <Text>Default size</Text>
+    <Text fontSize="small">Small size</Text>
+    <Text fontSize="medium">Medium size</Text>
+    <Text fontSize="large">large size</Text>
   </Flex>
 </Playground>
 
@@ -46,5 +49,18 @@ Use the `Text` component to control color, font-size, weight, and alignment.
   <Flex flexDirection="column">
     <Text centered>Center-aligned text</Text>
     <Text bold>Bold text</Text>
+  </Flex>
+</Playground>
+
+## Truncate and Tooltip
+
+<Playground>
+  <Flex flexDirection="column">
+    <Box bg={colors.grayLight} mb={2} width={100}>
+      <Text truncate>Truncated text with tooltip</Text>
+    </Box>
+    <Box bg={colors.grayLight} width={100}>
+      <Text>Non-truncated text</Text>
+    </Box>
   </Flex>
 </Playground>

@@ -11,7 +11,7 @@ function ColorBox({color, label, width}) {
   return (
     <ClipboardBox value={colorValue}>
       <Box bg={colorValue} p={2} width={width}>
-        <Text fontSize="10px" variant={getTextVariantFromColor(colorValue)}>
+        <Text fontSize="small" variant={getTextVariantFromColor(colorValue)}>
           <Flex>
             <b>{label}</b>
           </Flex>

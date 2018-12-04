@@ -11,7 +11,7 @@ function Spinner({message}) {
       <Logo disableLink showText={false} />
       {message && (
         <Box>
-          <Text fontSize="12px" variant="light">
+          <Text fontSize="medium" variant="light">
             {message}
           </Text>
         </Box>
