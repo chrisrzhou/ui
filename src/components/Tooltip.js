@@ -4,7 +4,7 @@ import {Box} from 'rebass';
 import PropTypes from 'prop-types';
 import colors from './../colors';
 import {getSizeValue} from './../css';
-import useClickOutside from './../hooks/useClickOutside';
+import {useClickOutside} from './../hooks';
 
 const TOOLTIP_ARROW_CSS = {
   top: `
