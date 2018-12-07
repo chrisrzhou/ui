@@ -26,6 +26,8 @@ Use the `Text` component to control color, font-size, weight, and alignment.
     <Text variant="base">Base</Text>
     <Text variant="active">Active</Text>
     <Text variant="light">Light</Text>
+    <Text variant="negative">Negative</Text>
+    <Text variant="positive">Positive</Text>
     <Text variant="placeholder">Placeholder</Text>
     <Flex bg="black"><Text variant="inverse">Inverse</Text></Flex>
     <Text variant="code">Code</Text>
@@ -53,6 +55,8 @@ Use the `Text` component to control color, font-size, weight, and alignment.
 </Playground>
 
 ## Truncate and Tooltip
+
+Auto truncate and display tooltip if `children` content is of type string.
 
 <Playground>
   <Flex flexDirection="column">

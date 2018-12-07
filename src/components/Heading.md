@@ -3,6 +3,7 @@ route: /components/heading
 ---
 
 import {Playground, PropsTable} from 'docz';
+import {Box} from 'rebass';
 import Heading from './Heading';
 import Link from './Link';
 
@@ -23,10 +24,15 @@ Supports six heading elements `h1`, `h2`, `h3`, `h4`, `h5`, `h6`.
   <Heading level={6}>Heading 6</Heading>
 </Playground>
 
-## With Link
+## Variants
 
 <Playground>
-  <Link disableTextDecoration href="https://github.com/chrisrzhou/ui">
-    <Heading level={1}>Heading 1</Heading>
-  </Link>
+  <Heading level={1} variant="base">Base</Heading>
+  <Heading level={1} variant="active">Active</Heading>
+  <Heading level={1} variant="light">Light</Heading>
+  <Heading level={1} variant="negative">Negative</Heading>
+  <Heading level={1} variant="positive">Positive</Heading>
+  <Heading level={1} variant="placeholder">Placeholder</Heading>
+  <Box bg="black"><Heading level={1} variant="inverse">Inverse</Heading></Box>
+  <Heading level={1} variant="code">Code</Heading>
 </Playground>

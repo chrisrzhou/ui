@@ -28,3 +28,7 @@ export const clickCSS = `
   }
   ${hoverCSS}
 `;
+
+export function getSizeValue(value) {
+  return typeof value === 'string' ? value : `${value}px`;
+}

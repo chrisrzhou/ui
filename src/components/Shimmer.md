@@ -15,7 +15,9 @@ Renders a shimmering loading content.
 ## Basic
 
 <Playground>
+  <h3>Animated</h3>
   <Shimmer />
+  <h3>Not animated</h3>
   <Shimmer animated={false} />
 </Playground>
 

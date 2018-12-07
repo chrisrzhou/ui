@@ -5,26 +5,31 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Text from './Text';
 
+const SIZES = {
+  small: 16,
+  medium: 32,
+  large: 40,
+};
+
 function Logo({disableLink, showText, size}) {
-  const fontSize = `${size * 0.4}px`;
   const logo = (
     <Flex alignItems="center">
       <LogoSVG
         style={{
-          height: size,
-          marginRight: showText && size / 10,
-          width: size,
+          height: SIZES[size],
+          marginRight: showText && SIZES[size] / 8,
+          width: SIZES[size],
         }}
       />
       {showText && (
         <>
-          <Text fontSize={fontSize} variant="active">
+          <Text fontSize={size} variant="active">
             chris
           </Text>
-          <Text fontSize={fontSize} variant="light">
+          <Text fontSize={size} variant="light">
             r
           </Text>
-          <Text fontSize={fontSize} variant="active">
+          <Text fontSize={size} variant="active">
             zhou
           </Text>
         </>
@@ -42,13 +47,13 @@ function Logo({disableLink, showText, size}) {
 
 Logo.defaultProps = {
   showText: true,
-  size: 40,
+  size: 'medium',
 };
 
 Logo.propTypes = {
   disableLink: PropTypes.bool,
   showText: PropTypes.bool,
-  size: PropTypes.number,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
 export default Logo;

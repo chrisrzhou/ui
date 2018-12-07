@@ -199,14 +199,16 @@ export function getTextVariantFromColor(color) {
 }
 
 const colors = {
+  ...palette,
   text: palette.black,
-  gray: palette.gray[6],
-  grayLight: palette.gray[3],
+  gray: palette.gray[4],
+  grayLight: palette.gray[2],
   grayWhite: palette.gray[0],
+  positive: palette.green[4],
+  negative: palette.red[4],
   white: '#FFFFFF',
   blackAlpha: 'rgba(0, 0, 0, 0.8)',
   whiteAlpha: 'rgba(255, 255, 255, 0.8)',
-  ...palette,
 };
 
 export default colors;

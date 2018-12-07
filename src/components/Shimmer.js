@@ -3,7 +3,7 @@ import styled, {css, keyframes} from 'styled-components';
 import {Flex} from 'rebass';
 import PropTypes from 'prop-types';
 import React from 'react';
-import colors from './../colors';
+import {getSizeValue} from './../css';
 
 const animationName = keyframes`
   0% {
@@ -22,15 +22,18 @@ const animation = ({animated}) => {
     : '';
 };
 
+const SHIMMER_LIGHT = '#f6f7f9';
+const SHIMMER_DARK = '#e9ebee';
+
 const ShimmerBox = styled.div`
   animation: ${animation} 1s linear infinite forwards;
-  background: ${colors.gray[0]};
+  background: ${SHIMMER_LIGHT};
   background-image: linear-gradient(
     to right,
-    ${colors.gray[0]} 0%,
-    ${colors.gray[1]} 20%,
-    ${colors.gray[0]} 40%,
-    ${colors.gray[0]} 100%
+    ${SHIMMER_LIGHT} 0%,
+    ${SHIMMER_DARK} 20%,
+    ${SHIMMER_LIGHT} 40%,
+    ${SHIMMER_LIGHT} 100%
   );
   background-repeat: no-repeat;
   background-size: 800px 100px;
@@ -39,10 +42,10 @@ const ShimmerBox = styled.div`
   flex-shrink: 0;
   margin-bottom: 8px;
   height: ${({height}) => {
-    return `${height}${Number.isInteger(height) ? 'px' : ''}`;
+    return getSizeValue(height);
   }};
   width: ${({width}) => {
-    return `${width}${Number.isInteger(width) ? 'px' : ''}`;
+    return getSizeValue(width);
   }};
   position: relative;
 `;
