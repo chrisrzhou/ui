@@ -1,15 +1,16 @@
 import {Box} from 'rebass';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {getSizeValue} from './../css';
 
 function Container({children, maxWidth, ...otherProps}) {
   return (
     <Box
-      {...otherProps}
       css={`
         margin: 0 auto;
-        max-width: ${maxWidth}px;
-      `}>
+        max-width: ${getSizeValue(maxWidth)};
+      `}
+      {...otherProps}>
       {children}
     </Box>
   );
@@ -21,7 +22,8 @@ Container.defaultProps = {
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
-  maxWidth: PropTypes.number.isRequired,
+  maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    .isRequired,
 };
 
 export default Container;

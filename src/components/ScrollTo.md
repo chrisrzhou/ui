@@ -19,10 +19,10 @@ A wrapping component implementing `window.scrollTo`.
 
 <Playground>
   <Position position="relative" style={{height: 1000}}>
-    <Position y={0}>
+    <Position position="absolute" y={0}>
       <ScrollTo y={1000}><Button label="scroll to bottom" /></ScrollTo>
     </Position>
-    <Position bottom={0}>
+    <Position position="absolute" bottom={0}>
       <ScrollTo><Icon icon="arrow-up" size="large" /></ScrollTo>
     </Position>
   </Position>

@@ -16,42 +16,58 @@ Simple progressive design system and documentation for personal projects.
 - Animations
 - React components
 
+## Main Dependencies
+
+- `octicons`
+- `react`
+- `react-spring`
+- `rebass`
+- `styled-components`
+- `typography`
+
+## Development
+
+Components are progressively documented in markdown (`mdx`) format using `docz`.
+
+```bash
+yarn add @chrisrzhou/ui
+cd ui
+yarn
+yarn dev
+```
+
 ## TODO
 
-- `Anchor`
-- `Provider`
+- `Tooltip`
+- `Popover` (tooltip with any content)
 - `Progress` (line/donut with color)
-- `Notification`
 - `Modal`
 - `Drawer` (like modal)
-- `Banner`
-- `BackgroundImage`
-- `Badge`
-- `Timeline`
+- `Notification`
 - `Collapse`
+- `Badge`
+- `Hug`
+- `Anchor`
+- `Provider`
+- `Banner`
+- `Timeline`
 - `Carousel`
 - `Breadcrumb`
 - `Checkbox`
 - `FormField` (uses `Input`, `Label`, similar to `FormRow`)
 - `Form` (uses `FormField`)
-- `Tooltip`
-- `Popover` (tooltip with any content)
-- `Hug`
-- `IconButton`
 - `Input` (number, string, email, password, textarea, validation)
 - `Label`
 - `Rate`
 - `Radio`
 - `Select`
 - `Slider`
-- `Tab`
 - `TabSet`
 - `Toggle`
 - `TabSet`
 - `ButtonSet`
 - `DatePicker`
 - `ColorPicker`
-- `PageSpinner` (uses `Spinner`)
 - Add documentation for `css.js`.
 - Reduce usage of custom `css` props, and rely on animation framework
 - Group components (data, input, display, navigation etc)

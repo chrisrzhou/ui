@@ -1,11 +1,12 @@
-import {Box} from 'rebass';
+import {Box, Flex} from 'rebass';
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import Text from './Text';
 import {clickCSS} from './../css';
 import colors from './../colors';
 
-function Button({active, disabled, label, onClick}) {
+function Button({active, children, disabled, label, onClick}) {
   return (
     <Box
       as="button"
@@ -19,15 +20,19 @@ function Button({active, disabled, label, onClick}) {
       onClick={onClick}
       px={3}
       py={2}>
-      <Text bold variant={active ? 'inverse' : 'active'}>
-        {label}
-      </Text>
+      <Flex alignItems="center">
+        {children}
+        <Text bold variant={active ? 'inverse' : 'active'}>
+          {label}
+        </Text>
+      </Flex>
     </Box>
   );
 }
 
 Button.propTypes = {
   active: PropTypes.bool,
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,

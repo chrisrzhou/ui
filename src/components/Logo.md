@@ -22,13 +22,13 @@ Site logo that links back to https://chrisrzhou.io.
 
 <Playground>
   <Flex>
-    <Logo size={20}/>
+    <Logo size="small"/>
   </Flex>
   <Flex>
-    <Logo size={40}/>
+    <Logo size="medium"/>
   </Flex>
   <Flex>
-    <Logo size={100}/>
+    <Logo size="large"/>
   </Flex>
 </Playground>
 

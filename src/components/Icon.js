@@ -1,9 +1,8 @@
-import colors, {getColorValue} from './../colors';
-
 import {Box} from 'rebass';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {clickCSS} from './../css';
+import {getColorValue} from './../colors';
 import iconography from './../iconography';
 
 const SIZES = {
@@ -15,14 +14,13 @@ const SIZES = {
 function Icon({active, color, icon, size, onClick, ...otherProps}) {
   return (
     <Box
-      {...otherProps}
       css={`
         cursor: ${onClick ? 'pointer' : undefined};
         display: inline-flex;
         svg {
           ${onClick ? clickCSS : ''};
           path {
-            fill: ${active ? colors.base : getColorValue(color)};
+            fill: ${active ? 'base' : getColorValue(color)};
           }
           height: ${SIZES[size]}px;
           width: ${SIZES[size]}px;
@@ -30,12 +28,13 @@ function Icon({active, color, icon, size, onClick, ...otherProps}) {
       `}
       dangerouslySetInnerHTML={{__html: iconography[icon]}}
       onClick={onClick}
+      {...otherProps}
     />
   );
 }
 
 Icon.defaultProps = {
-  color: colors.black,
+  color: 'black',
   size: 'medium',
 };
 

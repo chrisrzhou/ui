@@ -1,6 +1,7 @@
 import {Box} from 'rebass';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {getSizeValue} from './../css';
 
 function Position({
   bottom,
@@ -10,37 +11,42 @@ function Position({
   right,
   top,
   zIndex,
+  css,
   ...otherProps
 }) {
   return (
     <Box
-      {...otherProps}
       css={`
+        ${css};
         position: ${position};
-        bottom: ${bottom};
-        left: ${left};
-        right: ${right};
-        top: ${top};
+        bottom: ${getSizeValue(bottom)};
+        left: ${getSizeValue(left)};
+        right: ${getSizeValue(right)};
+        top: ${getSizeValue(top)};
         z-index: ${zIndex};
-      `}>
+      `}
+      {...otherProps}>
       {children}
     </Box>
   );
 }
 
-const numberOrArray = PropTypes.oneOfType([PropTypes.number, PropTypes.string]);
+const numberOrString = PropTypes.oneOfType([
+  PropTypes.number,
+  PropTypes.string,
+]);
 
 Position.defaultProps = {
-  position: 'absolute',
+  position: 'fixed',
 };
 
 Position.propTypes = {
-  bottom: numberOrArray,
+  bottom: numberOrString,
   children: PropTypes.node,
-  left: numberOrArray,
-  position: PropTypes.oneOf(['absolute', 'relative']).isRequired,
-  right: numberOrArray,
-  top: numberOrArray,
+  left: numberOrString,
+  position: PropTypes.oneOf(['absolute', 'fixed', 'relative']).isRequired,
+  right: numberOrString,
+  top: numberOrString,
   zIndex: PropTypes.number,
 };
 
