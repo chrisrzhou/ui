@@ -3,9 +3,8 @@ route: /components/container
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Box} from 'rebass';
+import Box from './../../docz/components/Box';
 import Container from './Container';
-import colors from './../colors';
 
 # Container
 
@@ -17,6 +16,6 @@ A `Container` centers content horizontally with a provided max-width.
 
 <Playground>
   <Container maxWidth={300}>
-    <Box bg={colors.gray} p={3} />
+    <Box />
   </Container>
 </Playground>

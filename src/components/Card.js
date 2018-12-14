@@ -8,7 +8,7 @@ function Card({children, title, ...otherProps}) {
   const Title = title && <Heading level={2}>{title}</Heading>;
   return (
     <RebassCard
-      borderRadius={8}
+      borderRadius={4}
       boxShadow={boxShadowStyle}
       p={4}
       {...otherProps}>

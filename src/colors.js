@@ -1,6 +1,6 @@
 // https://palx.jxnblk.com/5BA8F8
 
-const palette = {
+const palx = {
   base: '#5ba8f8',
   black: '#3b3f43',
   gray: [
@@ -164,18 +164,19 @@ const palette = {
 /* colorInput can be of the following valid formats:
  * - valid color key: 'base', 'gray', 'grayWhite'
  * - valid hex or rgba color: '#aabb11', 'rgba(0, 0, 0, 0.3)'
- * - valid palette color: 'gray1', 'green3', 'red9'
+ * - valid palx color: 'gray1', 'green3', 'red9'
  */
 export function getColorValue(colorInput) {
-  const paletteColorIndex = colorInput.length - 1;
-  const paletteColor = colors[colorInput.slice(0, paletteColorIndex)];
   if (colors[colorInput]) {
     return colors[colorInput];
-  } else if (paletteColor) {
-    return paletteColor[colorInput[paletteColorIndex]];
   } else {
-    return colorInput;
+    const paletteColorIndex = colorInput.length - 1;
+    const paletteColor = colors.palette[colorInput.slice(0, paletteColorIndex)];
+    if (paletteColor) {
+      return paletteColor[colorInput[paletteColorIndex]];
+    }
   }
+  return colorInput;
 }
 
 export function getTextVariantFromColor(color) {
@@ -198,17 +199,27 @@ export function getTextVariantFromColor(color) {
   return 0.299 * r + 0.587 * g + 0.114 * b > 186 ? 'base' : 'inverse';
 }
 
+const palette = {};
+
+Object.keys(palx).forEach(colorKey => {
+  if (colorKey !== 'base' && colorKey !== 'black') {
+    palette[colorKey] = palx[colorKey];
+  }
+});
+
 const colors = {
-  ...palette,
-  text: palette.black,
-  gray: palette.gray[4],
-  grayLight: palette.gray[2],
-  grayWhite: palette.gray[0],
-  positive: palette.green[4],
-  negative: palette.red[4],
+  base: palx.base,
+  black: palx.black,
   white: '#FFFFFF',
   blackAlpha: 'rgba(0, 0, 0, 0.8)',
   whiteAlpha: 'rgba(255, 255, 255, 0.8)',
+  gray: palx.gray[4],
+  grayLight: palx.gray[2],
+  grayWhite: palx.gray[0],
+  text: palx.black,
+  positive: palx.green[4],
+  negative: palx.red[4],
+  palette,
 };
 
 export default colors;

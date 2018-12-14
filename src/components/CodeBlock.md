@@ -16,7 +16,7 @@ Code formatting using `prismjs` and Github colors. A limited set of language (`j
 <Playground>
   <CodeBlock
     language="javascript"
-    value={"const myFunc = (b) => b + 2;"}
+    value="const myFunc = (b) => b + 2;"
   />
 </Playground>
 
@@ -25,7 +25,7 @@ Code formatting using `prismjs` and Github colors. A limited set of language (`j
 <Playground>
   <CodeBlock
     language="css"
-    value={".header {color: red;}"}
+    value=".header {color: red;}"
   />
 </Playground>
 
@@ -34,6 +34,6 @@ Code formatting using `prismjs` and Github colors. A limited set of language (`j
 <Playground>
   <CodeBlock
     language="bash"
-    value={"cd myDir"}
+    value="cd myDir"
   />
 </Playground>

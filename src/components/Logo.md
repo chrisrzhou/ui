@@ -3,7 +3,7 @@ route: /components/logo
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Flex} from 'rebass'
+import List from './List';
 import Logo from './Logo';
 
 # Logo
@@ -21,15 +21,11 @@ Site logo that links back to https://chrisrzhou.io.
 ## Custom Sizes
 
 <Playground>
-  <Flex>
+  <List direction="vertical">
     <Logo size="small"/>
-  </Flex>
-  <Flex>
     <Logo size="medium"/>
-  </Flex>
-  <Flex>
     <Logo size="large"/>
-  </Flex>
+  </List>
 </Playground>
 
 ## Hide Text

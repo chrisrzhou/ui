@@ -4,6 +4,7 @@ route: /components/shimmer
 
 import {Playground, PropsTable} from 'docz';
 import {Box, Flex} from 'rebass';
+import List from './List';
 import Shimmer from './Shimmer';
 
 # Shimmer
@@ -30,18 +31,16 @@ Renders a shimmering loading content.
 ## Custom Avatar Sizes
 
 <Playground>
-  <Flex mb={3}>
+  <List direction="vertical">
     <Shimmer avatar={{height: 40, width: 40}} />
-  </Flex>
-  <Flex mb={3}>
     <Shimmer avatar={{height: 40, width: 40, rounded: true}} />
-  </Flex>
-  <Flex mb={3}>
     <Shimmer avatar={{height: 100, width: 100, rounded: true}} />
-  </Flex>
+  </List>
 </Playground>
 
 ## Composable Shimmers
+
+Compose specific shimmer layouts using `Flex` and `Box`
 
 <Playground>
   <Flex alignItems="center">

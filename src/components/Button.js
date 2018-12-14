@@ -13,8 +13,8 @@ function Button({active, children, disabled, label, onClick}) {
       bg={active ? colors.base : colors.white}
       css={`
         border: 2px solid ${colors.base};
-        outline: none;
         ${clickCSS}
+        outline: none;
       `}
       disabled={disabled}
       onClick={onClick}

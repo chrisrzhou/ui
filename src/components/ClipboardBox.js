@@ -6,21 +6,19 @@ import Text from './Text';
 import {clickCSS} from './../css';
 import colors from './../colors';
 
+function copyToClipboard(value) {
+  const element = document.createElement('textarea');
+  element.value = value;
+  element.setAttribute('readonly', '');
+  element.style = {position: 'absolute', left: '-9999px'};
+  document.body.appendChild(element);
+  element.select();
+  document.execCommand('copy');
+  document.body.removeChild(element);
+}
+
 function ClipboardBox({children, message, value}) {
   const [copied, setCopied] = useState(false);
-
-  function copyToClipboard() {
-    const element = document.createElement('textarea');
-    element.value = value;
-    element.setAttribute('readonly', '');
-    element.style = {position: 'absolute', left: '-9999px'};
-    document.body.appendChild(element);
-    element.select();
-    document.execCommand('copy');
-    document.body.removeChild(element);
-    setCopied(true);
-  }
-
   return (
     <Box
       css={`
@@ -28,8 +26,11 @@ function ClipboardBox({children, message, value}) {
         position: relative;
         ${clickCSS};
       `}
-      onClick={copyToClipboard}
-      onMouseLeave={setCopied.bind(null, false)}>
+      onClick={() => {
+        copyToClipboard(value);
+        setCopied(true);
+      }}
+      onMouseLeave={() => setCopied(false)}>
       {children}
       <Flex
         alignItems="center"

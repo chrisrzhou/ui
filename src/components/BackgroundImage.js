@@ -2,6 +2,7 @@ import {Box} from 'rebass';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {getColorValue} from './../colors';
+import {getSizeValue} from './../css';
 
 function BackgroundImage({
   backgroundColor,
@@ -17,8 +18,9 @@ function BackgroundImage({
         background-image: url(${image});
         background-position: center;
         background-repeat: no-repeat;
+        background-size: 100%;
         border-radius: ${borderRadius};
-        height: ${height};
+        height: ${getSizeValue(height)};
       `}>
       {children}
     </Box>

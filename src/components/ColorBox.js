@@ -12,9 +12,11 @@ function ColorBox({color, label, width}) {
     <ClipboardBox value={colorValue}>
       <Box bg={colorValue} p={2} width={width}>
         <Text fontSize="small" variant={getTextVariantFromColor(colorValue)}>
-          <Flex>
-            <b>{label}</b>
-          </Flex>
+          {label && (
+            <Flex>
+              <b>{label}</b>
+            </Flex>
+          )}
           <Flex>{colorValue}</Flex>
         </Text>
       </Box>
@@ -28,7 +30,7 @@ ColorBox.defaultProps = {
 
 ColorBox.propTypes = {
   color: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 

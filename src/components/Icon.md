@@ -28,14 +28,18 @@ Renders an [octicon](https://github.com/primer/octicons) icon given a valid icon
 Accepts any valid color from `colors.js` and numeric pixel sizes.
 
 <Playground>
-  <List>
-    <Icon icon="octoface" size="small" />
-    <Icon icon="octoface" size="medium" />
-    <Icon icon="octoface" size="large" />
-    <Icon icon="octoface" color="positive" />
-    <Icon icon="octoface" color="negative" />
-    <Icon icon="octoface" color="cyan7" />
-    <Icon icon="octoface" color="green8" />
+  <List direction="vertical">
+    <List alignItems="flex-end">
+      <Icon icon="octoface" size="small" />
+      <Icon icon="octoface" size="medium" />
+      <Icon icon="octoface" size="large" />
+    </List>
+    <List>
+      <Icon icon="octoface" color="positive" />
+      <Icon icon="octoface" color="negative" />
+      <Icon icon="octoface" color="cyan7" />
+      <Icon icon="octoface" color="green8" />
+    </List>
   </List>
 </Playground>
 

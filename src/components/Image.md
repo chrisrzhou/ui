@@ -4,6 +4,7 @@ route: /components/image
 
 import {Playground, PropsTable} from 'docz';
 import Image from './Image';
+import List from './List';
 
 # Image
 
@@ -22,25 +23,21 @@ Basic image component that takes up the width of the container by default.
 ## Custom Size
 
 <Playground>
-  <p>
+  <List direction="vertical">
     <Image
       src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
       width="100px"
     />
-  </p>
-  <p>
     <Image
       src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
       height="100px"
       width="200px"
     />
-  </p>
-  <p>
     <Image
       src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
       width={1/2}
     />
-  </p>
+  </List>
 </Playground>
 
 ## Rounded Image

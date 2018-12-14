@@ -3,10 +3,14 @@ import React from 'react';
 import Text from './Text';
 import {getTypographyElementStyle} from './../typography';
 
-function Heading({children, level, variant}) {
+function Heading({centered, children, level, variant}) {
   const typographyStyle = getTypographyElementStyle(`h${level}`);
   return (
-    <Text as={`h${level}`} typographyStyle={typographyStyle} variant={variant}>
+    <Text
+      as={`h${level}`}
+      centered={centered}
+      typographyStyle={typographyStyle}
+      variant={variant}>
       {children}
     </Text>
   );
@@ -17,6 +21,7 @@ Heading.defaultProps = {
 };
 
 Heading.propTypes = {
+  centered: PropTypes.bool,
   children: PropTypes.node.isRequired,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   variant: PropTypes.oneOf([

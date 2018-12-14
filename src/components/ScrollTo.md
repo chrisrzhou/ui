@@ -3,7 +3,6 @@ route: /components/scroll-to
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Box} from 'rebass';
 import Button from './Button';
 import Icon from './Icon';
 import Position from './Position';

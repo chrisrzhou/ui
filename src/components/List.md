@@ -3,14 +3,13 @@ route: /components/list
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Box} from 'rebass';
+import Box from './../../docz/components/Box';
 import ColorBox from './ColorBox';
 import List from './List';
-import colors from './../colors';
 
 # List
 
-Renders a list of components with consistent spacing.
+`List` is an extended `Flex` component that renders children with consistent spacing.
 
 <PropsTable of={List} />
 
@@ -21,28 +20,51 @@ Any combination of components can be passed to `List`.
 <Playground>
   <h2>List of boxes</h2>
   <List>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </List>
   <h2>List of color pills</h2>
   <List>
-    <ColorBox color="base" label="Color Pill"/>
-    <ColorBox color="black" label="Color Pill"/>
-    <ColorBox color="gray" label="Color Pill"/>
-    <ColorBox color="grayLight" label="Color Pill"/>
-    <ColorBox color="grayWhite" label="Color Pill"/>
+    <ColorBox color="base" />
+    <ColorBox color="black" />
+    <ColorBox color="gray" />
+    <ColorBox color="grayLight" />
+    <ColorBox color="grayWhite" />
   </List>
   <h2>List of mixed components</h2>
   <List>
-    <ColorBox color="base" label="Color Pill"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <ColorBox color="gray" label="Color Pill"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
+    <ColorBox color="base" />
+    <Box />
+    <ColorBox color="gray" />
+    <Box />
     <div>Some Text</div>
-    <ColorBox color="grayLight" label="Color Pill"/>
+    <ColorBox color="grayLight" />
+  </List>
+</Playground>
+
+## alignItems
+
+<Playground>
+  <h2>flex-start (default)</h2>
+  <List alignItems="flex-start">
+    <Box p={4} />
+    <Box p={3} />
+    <Box p={2} />
+  </List>
+  <h2>center</h2>
+  <List alignItems="center">
+    <Box p={4} />
+    <Box p={3} />
+    <Box p={2} />
+  </List>
+  <h2>flex-end</h2>
+  <List alignItems="flex-end">
+    <Box p={4} />
+    <Box p={3} />
+    <Box p={2} />
   </List>
 </Playground>
 
@@ -50,11 +72,17 @@ Any combination of components can be passed to `List`.
 
 <Playground>
   <List wrap>
-    <Box bg={colors.gray} p={3} width="200px"/>
-    <Box bg={colors.gray} p={3} width="200px"/>
-    <Box bg={colors.gray} p={3} width="200px"/>
-    <Box bg={colors.gray} p={3} width="200px"/>
-    <Box bg={colors.gray} p={3} width="200px"/>
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </List>
 </Playground>
 
@@ -62,10 +90,39 @@ Any combination of components can be passed to `List`.
 
 <Playground>
   <List spacing={3}>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
-    <Box bg={colors.gray} p={3} width="100px"/>
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+  </List>
+</Playground>
+
+## Vertical Alignment and Nestable
+
+<Playground>
+  <List>
+    <List direction="vertical">
+      <Box>Column 1</Box>
+      <Box>Column 1</Box>
+      <List>
+        <Box>Row</Box>
+        <Box>Row</Box>
+        <Box>Row</Box>
+        <Box>Row</Box>
+        <Box>Row</Box>
+      </List>
+      <Box>Column 1</Box>
+      <Box>Column 1</Box>
+    </List>
+    <List direction="vertical">
+      <Box>Column 2</Box>
+      <Box>Column 2</Box>
+      <Box>Column 2</Box>
+      <List>
+        <Box>Row</Box>
+        <Box>Row</Box>
+      </List>
+    </List>
   </List>
 </Playground>

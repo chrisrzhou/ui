@@ -3,9 +3,9 @@ route: /typography
 ---
 
 import {Playground} from 'docz';
-import {Flex} from 'rebass';
 import CodeBlock from './components/CodeBlock';
 import Heading from './components/Heading';
+import List from './components/List';
 import Text from './components/Text';
 import typography from './typography';
 
@@ -25,7 +25,7 @@ value={JSON.stringify(typography.options, null, 2)}
 The generated typography styles are passed to the `Text` and `Heading` components. They are also injected in the `Provider` component. This allows consistent application of typography styles across UI components and native DOM elements.
 
 <Playground>
-  <Flex flexDirection="column">
+  <List direction="vertical">
     <Heading level={1}>Heading 1</Heading>
     <Heading level={2}>Heading 2</Heading>
     <Heading level={3}>Heading 3</Heading>
@@ -35,5 +35,5 @@ The generated typography styles are passed to the `Text` and `Heading` component
     <Text>Regular Text</Text>
     <Text bold>Bold Text</Text>
     <Text variant="code">Code Text</Text>
-  </Flex>
+  </List>
 </Playground>

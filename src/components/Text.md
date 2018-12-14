@@ -3,9 +3,9 @@ route: /components/text
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Box, Flex} from 'rebass';
+import {Box} from 'rebass';
+import List from './List';
 import Text from './Text';
-import colors from './../colors';
 
 # Text
 
@@ -22,49 +22,49 @@ Use the `Text` component to control color, font-size, weight, and alignment.
 ## Variants
 
 <Playground>
-  <Flex flexDirection="column">
+  <List direction="vertical">
     <Text variant="base">Base</Text>
     <Text variant="active">Active</Text>
     <Text variant="light">Light</Text>
     <Text variant="negative">Negative</Text>
     <Text variant="positive">Positive</Text>
     <Text variant="placeholder">Placeholder</Text>
-    <Flex bg="black"><Text variant="inverse">Inverse</Text></Flex>
+    <Box bg="black"><Text variant="inverse">Inverse</Text></Box>
     <Text variant="code">Code</Text>
-  </Flex>
+  </List>
 </Playground>
 
 ## Custom Font Size
 
 <Playground>
-  <Flex flexDirection="column">
+  <List direction="vertical">
     <Text>Default size</Text>
     <Text fontSize="small">Small size</Text>
     <Text fontSize="medium">Medium size</Text>
     <Text fontSize="large">large size</Text>
-  </Flex>
+  </List>
 </Playground>
 
 ## Formatting
 
 <Playground>
-  <Flex flexDirection="column">
-    <Text centered>Center-aligned text</Text>
+  <List direction="vertical">
+    <Box width="100%"><Text centered>Center-aligned text</Text></Box>
     <Text bold>Bold text</Text>
-  </Flex>
+  </List>
 </Playground>
 
 ## Truncate and Tooltip
 
-Auto truncate and display tooltip if `children` content is of type string.
+Auto-truncate and display tooltip if `children` content is of type `string`.
 
 <Playground>
-  <Flex flexDirection="column">
-    <Box bg={colors.grayLight} mb={2} width={100}>
+  <List direction="vertical">
+    <Box style={{border: '1px solid black'}} width="100px">
       <Text truncate>Truncated text with tooltip</Text>
     </Box>
-    <Box bg={colors.grayLight} width={100}>
+    <Box style={{border: '1px solid black'}} width="100px">
       <Text>Non-truncated text</Text>
     </Box>
-  </Flex>
+  </List>
 </Playground>

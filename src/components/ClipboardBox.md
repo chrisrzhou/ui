@@ -3,9 +3,10 @@ route: /components/clipboard-box
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Box, Flex} from 'rebass';
+import Box from './../../docz/components/Box';
 import Heading from './Heading';
 import ClipboardBox from './ClipboardBox';
+import List from './List';
 
 # ClipboardBox
 
@@ -18,20 +19,18 @@ Simple component that wraps around any component and supports copying provided s
 `ClipboardBox` works on any component.
 
 <Playground>
-  <Flex>
+  <List direction="vertical">
     <ClipboardBox value="hello box">
-      <Box bg="#ddd" p={2}>
+      <Box>
         Click to Copy!
       </Box>
     </ClipboardBox>
-  </Flex>
-  <Flex>
     <ClipboardBox value="hello heading">
       <Heading level={1}>
         Click to Copy!
       </Heading>
     </ClipboardBox>
-  </Flex>
+  </List>
 </Playground>
 
 ## Custom Copy Message

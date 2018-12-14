@@ -8,7 +8,7 @@ import colors from './../colors';
 
 # Position
 
-A `Box` with variable `position` attributes.
+Extension of `Box` supporting various `position` behaviors.
 
 <PropsTable of={Position} />
 

@@ -8,6 +8,7 @@ import Button from './Button';
 import Card from './Card';
 import Image from './Image';
 import Heading from './Heading';
+import List from './List';
 
 # Card
 
@@ -18,13 +19,15 @@ A card component renders a box with box-shadows that houses an optional title an
 ## Basic
 
 <Playground>
-  <Card mb={4}>
-    Card without a title
-  </Card>
-  <Card mb={4} title="Card with title only" />
-  <Card mb={4} title="Card with title">
-    and body
-  </Card>
+  <List direction="vertical" spacing={3}>
+    <Card title="Card with only a title" />
+    <Card>
+      Card without a title but with body
+    </Card>
+    <Card title="Card with title">
+      and body
+    </Card>
+  </List>
 </Playground>
 
 ## Advanced Content

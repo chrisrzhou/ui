@@ -3,13 +3,13 @@ route: /components/background-image
 ---
 
 import {Playground, PropsTable} from 'docz';
-import {Box, Flex} from 'rebass';
 import BackgroundImage from './BackgroundImage';
 import Heading from './Heading';
+import List from './List';
 
 # BackgroundImage
 
-Display a backend image that takes up the width of the parent container.
+Display a backend image that takes up the width of the parent container and a custom height.
 
 <PropsTable of={BackgroundImage} />
 
@@ -21,9 +21,7 @@ Renders a basic background image with content.
   <BackgroundImage
     height="200px"
     image="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg">
-    <Flex alignItems="center" css={`height: 100%`} justifyContent="center">
-      <Heading level={1} variant="inverse">Earth</Heading>
-    </Flex>
+    <Heading centered level={1} variant="inverse">Earth</Heading>
   </BackgroundImage>
 </Playground>
 
@@ -33,7 +31,7 @@ You can customize the border radius
 
 <Playground>
   <BackgroundImage
-    borderRadius="24px"
+    borderRadius="32px"
     height="200px"
     image="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
   />
@@ -44,22 +42,8 @@ You can customize the border radius
 You can also pass a valid background color in `colors`.
 
 <Playground>
-  <Box mb={2}>
-    <BackgroundImage
-      backgroundColor="base"
-      height="100px"
-    />
-  </Box>
-  <Box mb={2}>
-    <BackgroundImage
-      backgroundColor="red2"
-      height="100px"
-    />
-  </Box>
-  <Box mb={2}>
-    <BackgroundImage
-      backgroundColor="#abcdef"
-      height="100px"
-    />
-  </Box>
+  <BackgroundImage
+    backgroundColor="red2"
+    height="100px"
+  />
 </Playground>
