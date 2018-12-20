@@ -1,1 +1,1 @@
-export {default as withSpring} from './animations/withSpring';
+export {default as SpringAnimation} from './animations/SpringAnimation';

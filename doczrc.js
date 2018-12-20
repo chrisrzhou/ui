@@ -3,6 +3,7 @@ import typography from './src/typography';
 
 // merge typography.js styles with doczrc styles
 const {body, code, h1, h2, h3, h4, h5, h6, html} = typography.toJSON();
+
 export default {
   dest: 'dist/docs',
   files: '**/*.{md,mdx}',

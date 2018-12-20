@@ -8,5 +8,5 @@
     ],
     "@babel/react"
   ],
-  "plugins": ["inline-react-svg"]
+  "plugins": ["inline-react-svg", "babel-plugin-styled-components"]
 }

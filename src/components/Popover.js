@@ -3,19 +3,24 @@ import React, {useState} from 'react';
 import {Box} from 'rebass';
 import Card from './Card';
 import PropTypes from 'prop-types';
+import SpringAnimation from './../animations/SpringAnimation';
 import {clickCSS} from './../css';
 import colors from './../colors';
 import {useClickOutside} from './../hooks';
 
-const POSITION_CSS = {
+const positionStyles = {
   bottom: {
-    arrow: `
+    animationProperty: {
+      scaleDirection: 'Y',
+      transformOrigin: 'top',
+    },
+    arrowCSS: `
       box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.1);
       left: 50%;
       top: 4px;
       transform: translateX(-50%) rotate(45deg)
     `,
-    container: `
+    containerCSS: `
       bottom: 0;
       left: 50%;
       padding-top: 8px;
@@ -23,13 +28,17 @@ const POSITION_CSS = {
     `,
   },
   left: {
-    arrow: `
+    animationProperty: {
+      scaleDirection: 'X',
+      transformOrigin: 'right',
+    },
+    arrowCSS: `
       right: 4px;
       box-shadow: 2px -2px 4px rgba(0, 0, 0, 0.1);
       top: 50%;
       transform: translateY(-50%) rotate(45deg)
     `,
-    container: `
+    containerCSS: `
       left: 0;
       padding-right: 8px;
       top: 50%;
@@ -37,13 +46,17 @@ const POSITION_CSS = {
     `,
   },
   right: {
-    arrow: `
+    animationProperty: {
+      scaleDirection: 'X',
+      transformOrigin: 'left',
+    },
+    arrowCSS: `
       left: 4px;
       box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
       top: 50%;
       transform: translateY(-50%) rotate(45deg)
     `,
-    container: `
+    containerCSS: `
       right: 0;
       padding-left: 8px;
       top: 50%;
@@ -51,13 +64,17 @@ const POSITION_CSS = {
     `,
   },
   top: {
-    arrow: `
+    animationProperty: {
+      scaleDirection: 'Y',
+      transformOrigin: 'bottom',
+    },
+    arrowCSS: `
       bottom: 4px;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       left: 50%;
       transform: translateX(-50%) rotate(45deg)
     `,
-    container: `
+    containerCSS: `
       left: 50%;
       padding-bottom: 8px;
       top: 0;
@@ -96,6 +113,8 @@ function Popover({
     clickTrigger && toggleShow(false);
   }
 
+  const {containerCSS, arrowCSS, animationProperty} = positionStyles[position];
+  const {scaleDirection, transformOrigin} = animationProperty;
   return (
     <Box
       css={`
@@ -112,20 +131,34 @@ function Popover({
             position: absolute;
             width: ${width};
             z-index: ${zIndex};
-            ${POSITION_CSS[position].container}
+            ${containerCSS}
           `}>
-          <Card bg={background} px={2} py={1}>
-            {content}
-            <Box
-              bg={background}
-              css={`
-                position: absolute;
-                height: 8px;
-                width: 8px;
-                ${POSITION_CSS[position].arrow}
-              `}
-            />
-          </Card>
+          <SpringAnimation
+            animations={[
+              {
+                from: {
+                  opacity: 0,
+                  transform: `scale${scaleDirection}(0)`,
+                },
+                opacity: 1,
+                transform: `scale${scaleDirection}(1)`,
+                transformOrigin: transformOrigin,
+              },
+            ]}
+            configType="stiff">
+            <Card bg={background} px={2} py={1}>
+              {content}
+            </Card>
+          </SpringAnimation>
+          <Box
+            bg={background}
+            css={`
+              position: absolute;
+              height: 8px;
+              width: 8px;
+              ${arrowCSS}
+            `}
+          />
         </Box>
       )}
       {children}
