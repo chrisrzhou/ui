@@ -40,10 +40,11 @@ yarn dev
 
 ## TODO
 
+- check out react-spring hooks (`useKeyframe`), add `leave` animation for `Popover` and `Notification`, might need to change it from `Spring` to `Transition` under the hood.
+
 - `Progress` (line/donut with color)
 - `Modal`
 - `Drawer` (like modal)
-- `Notification`
 - `Collapse`
 - `Badge`
 - `Hug`

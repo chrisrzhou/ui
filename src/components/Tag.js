@@ -16,7 +16,7 @@ function Tag({label, color, onClick, onRemove}) {
       ml={1}
       icon="x"
       onClick={onRemove}
-      size="small"
+      size="s"
     />
   );
   return (
@@ -30,7 +30,7 @@ function Tag({label, color, onClick, onRemove}) {
       px={2}
       py={1}
       onClick={onClick}>
-      <Text fontSize="small" variant={textVariant}>
+      <Text size="xs" variant={textVariant}>
         {label}
       </Text>
       {RemoveIcon}

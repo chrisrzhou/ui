@@ -22,9 +22,9 @@ Site logo that links back to https://chrisrzhou.io.
 
 <Playground>
   <List direction="vertical">
-    <Logo size="small"/>
-    <Logo size="medium"/>
-    <Logo size="large"/>
+    <Logo size="s"/>
+    <Logo size="m"/>
+    <Logo size="l"/>
   </List>
 </Playground>
 

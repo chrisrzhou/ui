@@ -36,3 +36,14 @@ Supports six heading elements `h1`, `h2`, `h3`, `h4`, `h5`, `h6`.
   <Box bg="black"><Heading level={1} variant="inverse">Inverse</Heading></Box>
   <Heading level={1} variant="code">Code</Heading>
 </Playground>
+
+## Custom Colors
+
+Accepts any color from `colors.js` or valid CSS color
+
+<Playground>
+  <Heading level={1} color="base">base</Heading>
+  <Heading level={1} color="green3">green3</Heading>
+  <Heading level={1} color="red2">red2</Heading>
+  <Heading level={1} color="#abcdef">#abcdef</Heading>
+</Playground>

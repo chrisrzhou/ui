@@ -4,7 +4,7 @@ route: /components/scroll-to
 
 import {Playground, PropsTable} from 'docz';
 import Button from './Button';
-import Icon from './Icon';
+import IconButton from './IconButton';
 import Position from './Position';
 import ScrollTo from './ScrollTo';
 
@@ -22,7 +22,7 @@ A wrapping component implementing `window.scrollTo`.
       <ScrollTo y={1000}><Button label="scroll to bottom" /></ScrollTo>
     </Position>
     <Position position="absolute" bottom={0}>
-      <ScrollTo><Icon icon="arrow-up" size="large" /></ScrollTo>
+      <ScrollTo><IconButton icon="arrow-up" /></ScrollTo>
     </Position>
   </Position>
 </Playground>

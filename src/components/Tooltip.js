@@ -6,7 +6,7 @@ import colors from './../colors';
 
 function Tooltip({children, content, position, trigger, width, zIndex}) {
   const TooltipContent = (
-    <Text fontSize="small" variant="inverse">
+    <Text size="xs" variant="inverse">
       {content}
     </Text>
   );

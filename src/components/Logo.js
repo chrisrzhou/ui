@@ -6,9 +6,9 @@ import React from 'react';
 import Text from './Text';
 
 const SIZES = {
-  small: 16,
-  medium: 32,
-  large: 40,
+  s: 16,
+  m: 32,
+  l: 40,
 };
 
 function Logo({disableLink, showText, size}) {
@@ -23,13 +23,13 @@ function Logo({disableLink, showText, size}) {
       />
       {showText && (
         <>
-          <Text fontSize={size} variant="active">
+          <Text size={size} variant="active">
             chris
           </Text>
-          <Text fontSize={size} variant="light">
+          <Text size={size} variant="light">
             r
           </Text>
-          <Text fontSize={size} variant="active">
+          <Text size={size} variant="active">
             zhou
           </Text>
         </>
@@ -47,13 +47,13 @@ function Logo({disableLink, showText, size}) {
 
 Logo.defaultProps = {
   showText: true,
-  size: 'medium',
+  size: 'm',
 };
 
 Logo.propTypes = {
   disableLink: PropTypes.bool,
   showText: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['s', 'm', 'l']),
 };
 
 export default Logo;

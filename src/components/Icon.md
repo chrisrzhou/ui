@@ -30,9 +30,9 @@ Accepts any valid color from `colors.js` and numeric pixel sizes.
 <Playground>
   <List direction="vertical">
     <List alignItems="flex-end">
-      <Icon icon="octoface" size="small" />
-      <Icon icon="octoface" size="medium" />
-      <Icon icon="octoface" size="large" />
+      <Icon icon="octoface" size="s" />
+      <Icon icon="octoface" size="m" />
+      <Icon icon="octoface" size="l" />
     </List>
     <List>
       <Icon icon="octoface" color="positive" />

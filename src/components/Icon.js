@@ -6,9 +6,9 @@ import {getColorValue} from './../colors';
 import iconography from './../iconography';
 
 const SIZES = {
-  small: 14,
-  medium: 20,
-  large: 40,
+  s: 14,
+  m: 20,
+  l: 40,
 };
 
 function Icon({active, color, icon, size, onClick, ...otherProps}) {
@@ -35,14 +35,14 @@ function Icon({active, color, icon, size, onClick, ...otherProps}) {
 
 Icon.defaultProps = {
   color: 'black',
-  size: 'medium',
+  size: 'm',
 };
 
 Icon.propTypes = {
   active: PropTypes.bool,
   color: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['s', 'm', 'l']),
   onClick: PropTypes.func,
 };
 

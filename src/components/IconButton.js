@@ -6,11 +6,7 @@ import React from 'react';
 function IconButton({active, color, disabled, icon, label, onClick}) {
   return (
     <Button active={active} disabled={disabled} label={label} onClick={onClick}>
-      <Icon
-        color={color ? color : active ? 'white' : 'base'}
-        icon={icon}
-        size="medium"
-      />
+      <Icon color={color ? color : active ? 'white' : 'base'} icon={icon} />
     </Button>
   );
 }

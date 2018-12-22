@@ -1,8 +1,9 @@
+import colors, {getColorValue} from './../colors';
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Text as RebassText} from 'rebass';
 import Tooltip from './Tooltip';
-import colors from './../colors';
 import {getTypographyElementStyle} from './../typography';
 import {textTruncateCSS} from './../css';
 
@@ -18,16 +19,18 @@ const fontColors = {
 };
 
 const FONT_SIZES = {
-  small: '10px',
-  medium: '16px',
-  large: '32px',
+  xs: '10px',
+  s: '12px',
+  m: '16px',
+  l: '32px',
 };
 
 function Text({
   bold,
   centered,
   children,
-  fontSize,
+  color,
+  size,
   truncate,
   typographyStyle,
   variant,
@@ -42,9 +45,9 @@ function Text({
         ...(variant === 'code'
           ? getTypographyElementStyle('code')
           : typographyStyle),
-        color: fontColors[variant],
+        color: color ? getColorValue(color) : fontColors[variant],
         fontWeight: bold ? 'bold' : undefined,
-        fontSize: FONT_SIZES[fontSize],
+        fontSize: FONT_SIZES[size],
         textAlign: centered ? 'center' : undefined,
       }}
       {...otherProps}>
@@ -68,7 +71,8 @@ Text.propTypes = {
   bold: PropTypes.bool,
   centered: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  fontSize: PropTypes.oneOf(['small', 'medium', 'large']),
+  color: PropTypes.string,
+  size: PropTypes.oneOf(['xs', 's', 'm', 'l']),
   truncate: PropTypes.bool,
   typographyStyle: PropTypes.object,
   variant: PropTypes.oneOf([

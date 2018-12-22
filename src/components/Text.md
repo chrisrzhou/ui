@@ -39,9 +39,23 @@ Use the `Text` component to control color, font-size, weight, and alignment.
 <Playground>
   <List direction="vertical">
     <Text>Default size</Text>
-    <Text fontSize="small">Small size</Text>
-    <Text fontSize="medium">Medium size</Text>
-    <Text fontSize="large">large size</Text>
+    <Text size="xs">Extra small size</Text>
+    <Text size="s">Small size</Text>
+    <Text size="m">Medium size</Text>
+    <Text size="l">Large size</Text>
+  </List>
+</Playground>
+
+## Custom Colors
+
+Accepts any color from `colors.js` or valid CSS color
+
+<Playground>
+  <List direction="vertical">
+    <Text color="base">base</Text>
+    <Text color="green3">green3</Text>
+    <Text color="red2">red2</Text>
+    <Text color="#abcdef">#abcdef</Text>
   </List>
 </Playground>
 

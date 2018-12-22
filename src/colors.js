@@ -217,8 +217,8 @@ const colors = {
   grayLight: palx.gray[2],
   grayWhite: palx.gray[0],
   text: palx.black,
-  positive: palx.green[4],
-  negative: palx.red[4],
+  positive: palx.green[5],
+  negative: palx.red[5],
   palette,
 };
 

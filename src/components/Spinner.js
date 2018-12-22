@@ -30,9 +30,7 @@ function Spinner({message}) {
       </SpringAnimation>
       {message && (
         <Box>
-          <Text fontSize="medium" variant="light">
-            {message}
-          </Text>
+          <Text variant="light">{message}</Text>
         </Box>
       )}
     </Flex>

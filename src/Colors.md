@@ -5,9 +5,11 @@ route: /colors
 import {Playground} from 'docz';
 import {Box} from 'rebass';
 import ColorBox from './components/ColorBox';
+import Heading from './components/Heading';
 import Icon from './components/Icon';
 import List from './components/List';
 import Tag from './components/Tag';
+import Text from './components/Text';
 import colors from './colors';
 
 # Colors
@@ -91,5 +93,19 @@ The following components support the use of these color keys:
     <Tag color="green3" label="green3" />
     <Tag color="red2" label="red2" />
     <Tag color="#abcdef" label="#abcdef (custom)" />
+  </List>
+  <h2>Text</h2>
+  <List direction="vertical">
+    <Text color="base">base</Text>
+    <Text color="green3">green3</Text>
+    <Text color="red2">red2</Text>
+    <Text color="#abcdef">#abcdef</Text>
+  </List>
+  <h2>Heading</h2>
+  <List direction="vertical">
+    <Heading level={1} color="base">base</Heading>
+    <Heading level={1} color="green3">green3</Heading>
+    <Heading level={1} color="red2">red2</Heading>
+    <Heading level={1} color="#abcdef">#abcdef</Heading>
   </List>
 </Playground>
