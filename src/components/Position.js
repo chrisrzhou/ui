@@ -37,14 +37,15 @@ const numberOrString = PropTypes.oneOfType([
 ]);
 
 Position.defaultProps = {
-  position: 'fixed',
+  position: 'static',
 };
 
 Position.propTypes = {
   bottom: numberOrString,
   children: PropTypes.node,
   left: numberOrString,
-  position: PropTypes.oneOf(['absolute', 'fixed', 'relative']).isRequired,
+  position: PropTypes.oneOf(['absolute', 'fixed', 'relative', 'static'])
+    .isRequired,
   right: numberOrString,
   top: numberOrString,
   zIndex: PropTypes.number,

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
+import {SpringAnimation, config} from './../animations';
 
 import {Box} from 'rebass';
 import Card from './Card';
 import PropTypes from 'prop-types';
-import SpringAnimation from './../animations/SpringAnimation';
 import {clickCSS} from './../css';
 import colors from './../colors';
 import {useClickOutside} from './../hooks';
@@ -92,25 +92,25 @@ function Popover({
   width,
   zIndex,
 }) {
-  const [show, toggleShow] = useState(false);
+  const [show, setShow] = useState(false);
   const ref = useClickOutside(handleClickOutside);
 
   const clickTrigger = trigger === 'click';
 
   function handleMouseEnter() {
-    !clickTrigger && toggleShow(true);
+    !clickTrigger && setShow(true);
   }
 
   function handleMouseLeave() {
-    !clickTrigger && toggleShow(false);
+    !clickTrigger && setShow(false);
   }
 
   function handleClick() {
-    clickTrigger && toggleShow(!show);
+    clickTrigger && setShow(!show);
   }
 
   function handleClickOutside() {
-    clickTrigger && toggleShow(false);
+    clickTrigger && setShow(false);
   }
 
   const {containerCSS, arrowCSS, animationProperty} = positionStyles[position];
@@ -125,31 +125,32 @@ function Popover({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={ref}>
-      {show && (
-        <Box
-          css={`
-            position: absolute;
-            width: ${width};
-            z-index: ${zIndex};
-            ${containerCSS}
-          `}>
-          <SpringAnimation
-            animations={[
-              {
-                from: {
-                  opacity: 0,
-                  transform: `scale${scaleDirection}(0)`,
-                },
-                opacity: 1,
-                transform: `scale${scaleDirection}(1)`,
-                transformOrigin: transformOrigin,
+      <Box
+        css={`
+          position: absolute;
+          width: ${width};
+          z-index: ${zIndex};
+          ${containerCSS}
+        `}>
+        <SpringAnimation
+          animations={[
+            {
+              config: config.stiff,
+              from: {
+                opacity: 0,
+                transform: `scale${scaleDirection}(0)`,
               },
-            ]}
-            configType="stiff">
-            <Card bg={background} px={2} py={1}>
-              {content}
-            </Card>
-          </SpringAnimation>
+              opacity: 1,
+              transform: `scale${scaleDirection}(1)`,
+              transformOrigin: transformOrigin,
+            },
+          ]}
+          hide={!show}>
+          <Card bg={background} px={2} py={1}>
+            {content}
+          </Card>
+        </SpringAnimation>
+        {show && (
           <Box
             bg={background}
             css={`
@@ -159,8 +160,8 @@ function Popover({
               ${arrowCSS}
             `}
           />
-        </Box>
-      )}
+        )}
+      </Box>
       {children}
     </Box>
   );
