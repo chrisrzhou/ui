@@ -1,0 +1,35 @@
+---
+name: ColorBox
+route: /components/color-box
+---
+
+import {Playground, PropsTable} from 'docz';
+import ColorBox from 'src/components/ColorBox';
+import colors from 'src/colors';
+
+# ColorBox
+
+Renders a preview of the provided color, with clipboard copy support.
+
+<PropsTable of={ColorBox} />
+
+## Basic
+
+Renders any valid color key in `colors.js`.
+
+<Playground>
+  <ColorBox color="base" label="base" />
+  <ColorBox color="text" label="text" />
+  <ColorBox color="gray" label="gray" />
+  <ColorBox color="grayWhite" label="disabled" />
+  <ColorBox color="green3" label="green3" />
+</Playground>
+
+## Custom Colors / Width
+
+Custom color hexes and widths can be provided.
+
+<Playground>
+  <ColorBox color="#bb2211" label="Custom red" />
+  <ColorBox color="#1122bb" label="custom blue and width" width={300} />
+</Playground>

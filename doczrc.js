@@ -6,14 +6,13 @@ const {body, code, h1, h2, h3, h4, h5, h6, html} = typography.toJSON();
 
 export default {
   dest: 'dist/docs',
-  files: '**/*.{md,mdx}',
   hashRouter: true,
   htmlContext: {
     favicon: 'public/favicon.ico',
   },
   menu: ['Overview', 'Colors', 'Iconography', 'Typography', 'Animations'],
   ordering: 'ascending',
-  public: 'docz/public',
+  public: 'docs/public',
   src: '',
   // https://www.docz.site/introduction/customizing#themes
   themeConfig: {

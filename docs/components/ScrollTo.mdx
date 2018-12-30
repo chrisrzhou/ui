@@ -1,0 +1,33 @@
+---
+name: ScrollTo
+route: /components/scroll-to
+---
+
+import {Playground, PropsTable} from 'docz';
+import Button from 'src/components/Button';
+import IconButton from 'src/components/IconButton';
+import Position from 'src/components/Position';
+import ScrollTo from 'src/components/ScrollTo';
+
+# ScrollTo
+
+A wrapping component implementing `window.scrollTo`.
+
+<PropsTable of={ScrollTo} />
+
+## Basic
+
+<Playground>
+  <Position position="relative" style={{height: 1000}}>
+    <Position position="absolute" y={0}>
+      <ScrollTo y={1000}>
+        <Button label="scroll to bottom" />
+      </ScrollTo>
+    </Position>
+    <Position position="absolute" bottom={0}>
+      <ScrollTo>
+        <IconButton icon="arrow-up" />
+      </ScrollTo>
+    </Position>
+  </Position>
+</Playground>

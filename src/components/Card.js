@@ -19,7 +19,7 @@ function Card({children, title, ...otherProps}) {
 }
 
 Card.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   title: PropTypes.string,
 };
 

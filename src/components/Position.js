@@ -43,6 +43,7 @@ Position.defaultProps = {
 Position.propTypes = {
   bottom: numberOrString,
   children: PropTypes.node,
+  css: PropTypes.object,
   left: numberOrString,
   position: PropTypes.oneOf(['absolute', 'fixed', 'relative', 'static'])
     .isRequired,
